@@ -1,6 +1,4 @@
-// Les 1 - opdracht 5
-
-// START STAP 5.2 
+// Les 2 - opdracht 6
 
 /***
 * cmdaan.js
