@@ -112,7 +112,7 @@ var app = app || {};
 		trigger: function (type, url, success, data) 
 		{
 			var req = new XMLHttpRequest;
-			req.open(type, "url", true);
+			req.open(type, url, true);
 
 			req.setRequestHeader('Content-type','application/json');
 

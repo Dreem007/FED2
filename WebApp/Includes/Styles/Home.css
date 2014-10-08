@@ -1,0 +1,11 @@
+/* Extra CSS for "index.html" */
+
+section
+{
+	display:none;
+}
+
+section.Active
+{
+	display:block;
+}

@@ -5,31 +5,32 @@
         <meta name="description" content="Web App V1, basic JavaScript Skeleton">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>My Favorite Movies</title>
-        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="Includes/Styles/Default.css">
+        <link rel="stylesheet" href="Includes/Styles/Home.css">
         <link rel="author" href="humans.txt">
     </head>
     <body>
 		<main id="content">
-			<section data-route="about">
+			<section id="about">
 				<header>
-					<h1 data-route="title">About this app</h1>
-					<p data-route="description"></p>
+					<h1 data-bind="title"></h1>
+					<p data-bind="description"></p>
 				</header>
 			</section>
 
-			<section data-route="movies">
-				<h1 >Favorite movies</h1>	
-				<article>
+			<section id="ShowMovies">
+				<h1>Favorite movies</h1>	
+				<article id="movies">
 					<header>
-						<h1 data-route="title"></h1>
-						<em>Release date: <time data-route="releaseDate"></time></em>
+						<h1 data-bind="title"></h1>
+						<em>Release date: <time data-bind="releaseDate"></time></em>
 					</header>
 
 					<figure>
-						<img data-route="cover" alt="">
+						<img data-bind="cover" alt="">
 					</figure>
 
-					<p data-route="description"></p>
+					<p data-bind="description"></p>
 				</article>
 			</section>
 		</main>
