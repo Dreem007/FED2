@@ -1,4 +1,4 @@
-// AVV 1, FRONT-END DEVELOPMENT 2 - WOENSDAG, 1 OKTOBER 2014
+// AVV 1, FRONT-END DEVELOPMENT 2 - WOENSDAG, 22 OKTOBER 2014
 
 var app = app || {};
 
@@ -108,7 +108,8 @@ var app = app || {};
 
 	};
 
-	app.xhr = {
+	app.xhr = 
+	{
 		trigger: function (type, url, success, data) 
 		{
 			var req = new XMLHttpRequest;
@@ -118,20 +119,16 @@ var app = app || {};
 
 			type === 'POST' ? req.send(data) : req.send(null);
 
-			req.onreadystatechange = function() 
-			{
-				if (req.readyState === 4) 
-				{
+			req.onreadystatechange = function() {
+				if (req.readyState === 4) {
 					if (req.status === 200 || req.status === 201) 
 					{
 						success(req.responseText);
 					}
 				}
-			};
+			}
 		}
 	};
-
-	console.log(app.xhr.trigger());
 
 })();
 
