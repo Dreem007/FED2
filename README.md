@@ -47,7 +47,7 @@ ________ BEST PRACTICES - CSS ________
 
 - Hoofdbestand Default.css noemen
 - Bovenaan het bestand aangeven voor welke pagina het CSS bestand geldt, tenzij het Default.css heet
-- Een Standard.css bestand creëren met daarin veelgebruikte technieken (Bootstrap), eventueel toegewezen aan classes. 
+- Een gedeelte "STANDARD.CSS" creëren binnen Default.css met daarin veelgebruikte technieken (Bootstrap), eventueel toegewezen aan classes. 
   Hierdoor hoef je minder regels code te schrijven in de opvolgende CSS bestanden, en scheelt het je een
   hoop werk.
 - Het CSS bestand opdelen in verschillende secties, waarin je duidelijk aangeeft welk deel van de HTML pagina je gaat stylen. 
