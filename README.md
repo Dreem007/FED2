@@ -40,7 +40,7 @@ ________ BEST PRACTICES - HTML ________
 
 - Alles tussen dubbele haakjes zetten (consistentie)
 - Structuur duidelijk maken d.m.v. tabs
-- Javascript bestanden onderaan het bestand zetten, voor het beëindigen van de </body>
+- Javascript bestanden onderaan het bestand zetten, voor het beëindigen van de body
 - Gebruik definitieve paden (/Includes/Images/....jpg)
 
 ________ BEST PRACTICES - CSS ________
