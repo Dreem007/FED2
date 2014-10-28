@@ -1,11 +1,175 @@
 /* Extra CSS for "index.html" */
 
-section
+section, #GenreNavigation
 {
 	display:none;
 }
 
-section.Active
+section.Active, #GenreNavigation.Active
 {
 	display:block;
 }
+
+/* START STYLING NAVIGATION */
+
+#MainNavigation ul li
+{
+	float:left;
+	width:50%;
+}
+
+	#MainNavigation ul li a
+	{
+		display:block;
+		text-align:center;
+		font-size:50px;
+		color:#FFFFFF;
+		width:100%;
+		-webkit-box-shadow:inset 0 0 6px 0 #019fb3;
+		   -moz-box-shadow:inset 0 0 6px 0 #019fb3;
+				box-shadow:inset 0 0 6px 0 #019fb3; 
+		background-color:#00bcd4;
+	}
+
+		#MainNavigation ul li a:hover
+		{
+			background-color:#028a9b;
+		}
+
+/* END STYLING NAVIGATION */
+
+/* START STYLING ABOUT */
+
+#about h1
+{
+	text-align:center;
+	font-size:50px;
+	color:#4d4d4d;
+	margin:0;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+#about p
+{
+	line-height:33px;
+	font-size:25px;
+	color:#4d4d4d;
+}
+
+/* END STYLING ABOUT */
+
+/* START STYLING GENRES */
+
+#GenreNavigation ul li
+{
+	float:left;
+}
+
+	#GenreNavigation ul li a
+	{
+		display:block;
+		text-align:center;
+		font-size:25px;
+		color:#00bcd4;
+		width:100%;
+		padding:2px;
+		padding-right:10px;
+		padding-left:10px;
+		background-color:#effb41;
+		-webkit-box-shadow:inset 0 0 0 1px #00bcd4;
+		   -moz-box-shadow:inset 0 0 0 1px #00bcd4;
+				box-shadow:inset 0 0 0 1px #00bcd4; 
+	}
+
+	#GenreNavigation ul li a.ActiveTwo
+	{
+		color:#FFFFFF;
+		background-color:#00bcd4;
+	}
+
+/* END STYLING GENRES */
+
+/* START STYLING SHOWMOVIES */
+
+.Movies .Container > h1
+{
+	text-align:left;
+	font-size:46px;
+	color:#4d4d4d;
+	margin:0;
+	margin-top:25px;
+	margin-bottom:10px;
+}
+
+	.Movies article h1
+	{
+		margin:0;
+	}
+
+		.Movies article h1 a
+		{
+			text-align:left;
+			font-size:36px;
+			color:#00bcd4;
+		}
+
+	.Movies article em, .Movies article em time
+	{
+		font-size:20px;
+		color:#4d4d4d;
+	}
+
+		.Movies article em time
+		{
+			text-decoration:underline;
+		}
+
+	.Movies article p
+	{
+		line-height:30px;
+		font-size:25px;
+		color:#4d4d4d;
+	}
+
+	.Movies article p#Score
+	{
+		font-size:40px;
+		margin-top:20px;
+		margin-bottom:20px;
+		padding-bottom:20px;
+		border-bottom:3px dotted #effb41;
+	}
+
+/* END STYLING SHOWMOVIES */
+
+/* START STYLING DETAIL */
+
+#detail h1
+{
+	text-align:left;
+	font-size:50px;
+	color:#00bcd4;
+	margin:0;
+	margin-top:20px;
+}
+
+#detail em, #detail em time
+{
+	font-size:20px;
+	color:#4d4d4d;
+}
+
+	#detail em time
+	{
+		text-decoration:underline;
+	}
+
+#detail p
+{
+	line-height:30px;
+	font-size:25px;
+	color:#4d4d4d;
+	margin-top:20px;
+}
+/* END STYLING DETAIL */

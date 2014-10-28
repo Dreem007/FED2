@@ -11,68 +11,94 @@
     </head>
     <body>
 		<main id="content">
-			<section id="about">
-				<header>
-					<h1 data-bind="title"></h1>
-					<p data-bind="description"></p>
-				</header>
-			</section>
-
-			<section id="ShowMovies">
-				<nav>
-					<ul>
-						<li>
-							<a href="#movies/genre/Thriller">Thriller</a>
-						</li>
-						<li>
-							<a href="#movies/genre/Crime">Crime</a>
-						</li>
-						<li>
-							<a href="#movies/genre/Drama">Drama</a>
-						</li>
-						<li>
-							<a href="#movies/genre/Horror">Horror</a>
-						</li>
-						<li>
-							<a href="#movies/genre/Adventure">Adventure</a>
-						</li>
-						<li>
-							<a href="#movies/genre/Action">Action</a>
-						</li>
-					</ul>
-				</nav>
-				<h1>Favorite movies</h1>	
-				<article id="movies">
-					<header>
-						<h1><a data-bind="title" href=""></a></h1>
-						<p data-bind="averageScore"></p>
-
-						<em>Release date: <time data-bind="release_date"></time></em>
-					</header>
-
-					<figure>
-						<img data-bind="cover" alt="">
-					</figure>
-
-					<p data-bind="plot"></p>
-					<p data-bind="score"></p>
-				</article>
-			</section>
-
-			<section data-route="detail" id="detail">
-				<h1 data-bind="title"></h1>
-				<img data-bind="cover" alt="" />
-				<p data-bind="plot"></p>
-			</section>
-		</main>
-		<header>
-			<nav>
+			<nav id="MainNavigation" class="clearfix">
 				<ul>
 					<li><a href="#about">About</a></li>
 					<li><a href="#movies">Movies</a></li>
 				</ul>
 			</nav>
-		</header>
+
+			<section id="about">
+				<div class="Container">
+					<h1 data-bind="title"></h1>
+					<p data-bind="description"></p>
+				</div>
+			</section>
+
+			<nav id="GenreNavigation" class="clearfix">
+				<ul>
+					<li>
+						<a href="#movies/genre/Thriller">Thriller</a>
+					</li>
+					<li>
+						<a href="#movies/genre/Crime">Crime</a>
+					</li>
+					<li>
+						<a href="#movies/genre/Drama">Drama</a>
+					</li>
+					<li>
+						<a href="#movies/genre/Horror">Horror</a>
+					</li>
+					<li>
+						<a href="#movies/genre/Adventure">Adventure</a>
+					</li>
+					<li>
+						<a href="#movies/genre/Action">Action</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section id="ShowMovies" class="Movies">
+				<div class="Container">
+					<h1>Favorite movies</h1>	
+					<article id="movies">
+						<header>
+							<h1><a data-bind="title" href=""></a></h1>
+							<p data-bind="averageScore"></p>
+
+							<em>Release date: <time data-bind="release_date"></time></em>
+						</header>
+
+						<figure>
+							<img data-bind="cover" alt="">
+						</figure>
+
+						<p data-bind="plot"></p>
+						<p id="Score" data-bind="score"></p>
+					</article>
+				</div>
+			</section>
+
+			<section id="filter" class="Movies">
+				<div class="Container">
+					<h1>Genre filter</h1>	
+					<article id="movies">
+						<header>
+							<h1><a data-bind="title" href=""></a></h1>
+							<p data-bind="averageScore"></p>
+
+							<em>Release date: <time data-bind="release_date"></time></em>
+						</header>
+
+						<figure>
+							<img data-bind="cover" alt="">
+						</figure>
+
+						<p data-bind="plot"></p>
+						<p id="Score" data-bind="score"></p>
+					</article>
+				</div>
+			</section>
+
+				<section data-route="detail" id="detail">
+					<div class="Container">
+						<h1 data-bind="title"></h1>
+						<img data-bind="cover" alt="" />
+						<p data-bind="plot"></p>
+					</div>
+				</section>
+			</div>
+		</main>
         <script src="Includes/Javascript/Transparency/dist/transparency.min.js"></script>
         <script src="Includes/Javascript/Routie.js"></script>
         <script src="Includes/Javascript/Underscore.js"></script>

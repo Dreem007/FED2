@@ -13,7 +13,7 @@ var movieApp = movieApp || {};
 
 			movieApp.router.init();
 			movieApp.sections.init();
-
+			movieApp.selector.init();
 		}
 
 	};
@@ -36,13 +36,14 @@ var movieApp = movieApp || {};
 
 			    'movies/genre/:genre': function(genre){
                     movieApp.content.genre(genre);
-                    Transparency.render(document.getElementById('movies'), movieApp.content.filteredData, movieApp.content.directives);
+                    Transparency.render(document.getElementById('filter'), movieApp.content.filteredData, movieApp.content.directives);
+                    movieApp.sections.toggle("filter");
                 },
 
                 'movies/:title': function(title) {
                     movieApp.content.title(title);
-                    movieApp.sections.toggle("detail");
                     Transparency.render(document.getElementById('detail'), movieApp.content.filteredData, movieApp.content.directives);
+                    movieApp.sections.toggle("detail");
                 },
 
 			});
@@ -119,6 +120,7 @@ var movieApp = movieApp || {};
             // Stelt movieApp.content.filteredData gelijk aan -
             // _.where= kijkt naar alle waarden binnen een array, en geeft alleen de waarden terug met het juiste sleutelwoord. 
             movieApp.content.filteredData = _.where(movieApp.content.movies, {genre:true});
+            console.log(movieApp.content.filteredData);
         },
 
         // Methode met underscore; zorgt voor het filteren op de juiste titel
@@ -162,15 +164,47 @@ var movieApp = movieApp || {};
 				document.getElementById("about").classList.add("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
+				document.getElementById("filter").classList.remove("Active");
+				document.getElementById("GenreNavigation").classList.remove("Active");
 			} else if(section === "movies") {
 				document.getElementById("ShowMovies").classList.add("Active");
+				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("about").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
+				document.getElementById("filter").classList.remove("Active");
 			} else if(section === "detail") {
 				document.getElementById("detail").classList.add("Active");
+				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");
+				document.getElementById("filter").classList.remove("Active");
+			} else if(section === "filter") {
+				document.getElementById("filter").classList.add("Active");
+				document.getElementById("GenreNavigation").classList.add("Active");
+				document.getElementById("about").classList.remove("Active");
+				document.getElementById("ShowMovies").classList.remove("Active");
+				document.getElementById("detail").classList.remove("Active");
 			}
+		}
+
+	};
+
+	movieApp.selector = {
+
+		init: function() {
+			var selector, elems, makeActive;
+			selector = 'a';
+			elems = document.querySelectorAll(selector);
+			makeActive = function () 
+			{
+			    for (var i = 0; i < elems.length; i++)
+			    elems[i].classList.remove('ActiveTwo');
+
+			   	this.classList.add('ActiveTwo');
+
+			}; 
+			for (var i = 0; i < elems.length; i++)
+			elems[i].addEventListener('mousedown', makeActive);
 		}
 
 	};

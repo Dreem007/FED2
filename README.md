@@ -5,6 +5,16 @@
 ---- Frontend Development 2
 ---- 03-07-2014
 
+________ BEST PRACTICES - Javascript ________
+
+- camelCase (tja hij hoort erbij)
+- Altijd "var" gebruiken, dus var x = "Hello" i.p.v. x = "Hello"
+- Zet geen objecten en dergelijken in de global space, tenzij het een system-wide script is en je zeker weet dat het voordelen betrekt
+- Gebruik relevante namen die internationaal te begrijpen zijn
+- Gebruik comments om aan te geven waar het volgende stuk code voor gebruikt wordt, of het ergens van afhankelijk is (
+  andere libraries), et cetera.
+- Veel if/else kan opgelost worden met de || (OR) methode, wat vaak netter staat
+
 ________ BEST PRACTICES - algemeen ________
 
 - Consistente mappen hiërarchie: 
