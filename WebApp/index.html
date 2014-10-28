@@ -11,10 +11,18 @@
     </head>
     <body>
 		<main id="content">
+			<section id="Welcome" class="Active">
+				<p>Hi! Wil jij supervette ultradolle films zien? Klik dan op de navigatie knop hierboven!</p>
+			</section>
+
+			<section id="Loader">
+				<img src="Includes/Images/ajax-loader.gif" alt="" />
+			</section>
+
 			<nav id="MainNavigation" class="clearfix">
 				<ul>
-					<li><a href="#about">About</a></li>
-					<li><a href="#movies">Movies</a></li>
+					<li><a id="NavAbout" href="#about">About</a></li>
+					<li><a id="NavMovies" href="#movies">Movies</a></li>
 				</ul>
 			</nav>
 
@@ -25,28 +33,32 @@
 				</div>
 			</section>
 
-			<nav id="GenreNavigation" class="clearfix">
-				<ul>
-					<li>
-						<a href="#movies/genre/Thriller">Thriller</a>
-					</li>
-					<li>
-						<a href="#movies/genre/Crime">Crime</a>
-					</li>
-					<li>
-						<a href="#movies/genre/Drama">Drama</a>
-					</li>
-					<li>
-						<a href="#movies/genre/Horror">Horror</a>
-					</li>
-					<li>
-						<a href="#movies/genre/Adventure">Adventure</a>
-					</li>
-					<li>
-						<a href="#movies/genre/Action">Action</a>
-					</li>
-				</ul>
-			</nav>
+			<div id="GenreContainer">
+				<div class="Container">
+					<nav id="GenreNavigation" class="clearfix">
+						<ul>
+							<li>
+								<a href="#movies/genre/Thriller">Thriller</a>
+							</li>
+							<li>
+								<a href="#movies/genre/Crime">Crime</a>
+							</li>
+							<li>
+								<a href="#movies/genre/Drama">Drama</a>
+							</li>
+							<li>
+								<a href="#movies/genre/Horror">Horror</a>
+							</li>
+							<li>
+								<a href="#movies/genre/Adventure">Adventure</a>
+							</li>
+							<li>
+								<a href="#movies/genre/Action">Action</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 
 			<section id="ShowMovies" class="Movies">
 				<div class="Container">
@@ -64,7 +76,10 @@
 						</figure>
 
 						<p data-bind="plot"></p>
-						<p id="Score" data-bind="score"></p>
+						<p class="Score">
+							Gemiddelde rating:
+							<span class="Score" data-bind="score"></span>
+						</p>
 					</article>
 				</div>
 			</section>

@@ -10,10 +10,10 @@ var movieApp = movieApp || {};
 
 		init: function() 
 		{
-
 			movieApp.router.init();
 			movieApp.sections.init();
-			movieApp.selector.init();
+			movieApp.navSelector.init();
+			movieApp.mobileGestures.init();
 		}
 
 	};
@@ -162,12 +162,18 @@ var movieApp = movieApp || {};
 		toggle: function(section) {
 			if (section === "about") {
 				document.getElementById("about").classList.add("Active");
+				document.getElementById("NavAbout").classList.add("Active");
+				document.getElementById("Welcome").classList.remove("Active");
+				document.getElementById("NavMovies").classList.remove("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
 				document.getElementById("filter").classList.remove("Active");
 				document.getElementById("GenreNavigation").classList.remove("Active");
 			} else if(section === "movies") {
 				document.getElementById("ShowMovies").classList.add("Active");
+				document.getElementById("NavMovies").classList.add("Active");
+				document.getElementById("Welcome").classList.remove("Active");
+				document.getElementById("NavAbout").classList.remove("Active");
 				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("about").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
@@ -175,12 +181,14 @@ var movieApp = movieApp || {};
 			} else if(section === "detail") {
 				document.getElementById("detail").classList.add("Active");
 				document.getElementById("GenreNavigation").classList.add("Active");
+				document.getElementById("Welcome").classList.remove("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");
 				document.getElementById("filter").classList.remove("Active");
 			} else if(section === "filter") {
 				document.getElementById("filter").classList.add("Active");
 				document.getElementById("GenreNavigation").classList.add("Active");
+				document.getElementById("Welcome").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
@@ -189,7 +197,7 @@ var movieApp = movieApp || {};
 
 	};
 
-	movieApp.selector = {
+	movieApp.navSelector = {
 
 		init: function() {
 			var selector, elems, makeActive;
@@ -209,6 +217,68 @@ var movieApp = movieApp || {};
 
 	};
 
+	movieApp.mobileGestures = {
+
+		init: function() {
+
+			document.addEventListener('touchstart', handleTouchStart, false);        
+			document.addEventListener('touchmove', handleTouchMove, false);
+
+			var xDown = null;                                                        
+			var yDown = null;                                                        
+
+			function handleTouchStart(evt) {                                         
+			    xDown = evt.touches[0].clientX;                                      
+			    yDown = evt.touches[0].clientY;                                      
+			};                                                
+
+			function handleTouchMove(evt) {
+			    if ( ! xDown || ! yDown ) {
+			        return;
+			    }
+
+			    var xUp = evt.touches[0].clientX;                                    
+			    var yUp = evt.touches[0].clientY;
+
+			    var xDiff = xDown - xUp;
+			    var yDiff = yDown - yUp;
+
+			    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+			        if ( xDiff > 0 ) {
+			            document.getElementById("about").classList.add("Active");
+						document.getElementById("NavAbout").classList.add("Active");
+						document.getElementById("Welcome").classList.remove("Active");
+						document.getElementById("NavMovies").classList.remove("Active");
+						document.getElementById("ShowMovies").classList.remove("Active");
+						document.getElementById("detail").classList.remove("Active");
+						document.getElementById("filter").classList.remove("Active");
+						document.getElementById("GenreNavigation").classList.remove("Active");
+			        } else {
+			          	document.getElementById("ShowMovies").classList.add("Active");
+						document.getElementById("NavMovies").classList.add("Active");
+						document.getElementById("Welcome").classList.remove("Active");
+						document.getElementById("NavAbout").classList.remove("Active");
+						document.getElementById("GenreNavigation").classList.add("Active");
+						document.getElementById("about").classList.remove("Active");
+						document.getElementById("detail").classList.remove("Active");
+						document.getElementById("filter").classList.remove("Active");
+				    }                       
+			    } else {
+			        if ( yDiff > 0 ) {
+			            /* up swipe */ 
+			        } else { 
+			            /* down swipe */
+			        }                                                                 
+			    }
+			    /* reset values */
+			    xDown = null;
+			    yDown = null;                                             
+			};
+
+		}
+
+	}
+
 	movieApp.xhr = {
 		trigger: function (type, url, success, data) 
 		{
@@ -224,6 +294,7 @@ var movieApp = movieApp || {};
 					if (req.status === 200 || req.status === 201) 
 					{
 						success(req.responseText);
+						document.getElementById("Loader").style.display = 'none';
 					}
 				}
 			}
