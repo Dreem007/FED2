@@ -19,19 +19,50 @@
 			</section>
 
 			<section id="ShowMovies">
+				<nav>
+					<ul>
+						<li>
+							<a href="#movies/genre/Thriller">Thriller</a>
+						</li>
+						<li>
+							<a href="#movies/genre/Crime">Crime</a>
+						</li>
+						<li>
+							<a href="#movies/genre/Drama">Drama</a>
+						</li>
+						<li>
+							<a href="#movies/genre/Horror">Horror</a>
+						</li>
+						<li>
+							<a href="#movies/genre/Adventure">Adventure</a>
+						</li>
+						<li>
+							<a href="#movies/genre/Action">Action</a>
+						</li>
+					</ul>
+				</nav>
 				<h1>Favorite movies</h1>	
 				<article id="movies">
 					<header>
-						<h1 data-bind="title"></h1>
-						<em>Release date: <time data-bind="releaseDate"></time></em>
+						<h1><a data-bind="title" href=""></a></h1>
+						<p data-bind="averageScore"></p>
+
+						<em>Release date: <time data-bind="release_date"></time></em>
 					</header>
 
 					<figure>
 						<img data-bind="cover" alt="">
 					</figure>
 
-					<p data-bind="description"></p>
+					<p data-bind="plot"></p>
+					<p data-bind="score"></p>
 				</article>
+			</section>
+
+			<section data-route="detail" id="detail">
+				<h1 data-bind="title"></h1>
+				<img data-bind="cover" alt="" />
+				<p data-bind="plot"></p>
 			</section>
 		</main>
 		<header>
@@ -44,6 +75,7 @@
 		</header>
         <script src="Includes/Javascript/Transparency/dist/transparency.min.js"></script>
         <script src="Includes/Javascript/Routie.js"></script>
+        <script src="Includes/Javascript/Underscore.js"></script>
         <script src="Includes/Javascript/app.js"></script>
     </body>
 </html>

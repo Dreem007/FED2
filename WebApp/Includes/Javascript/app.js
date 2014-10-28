@@ -1,47 +1,60 @@
 // AVV 1, FRONT-END DEVELOPMENT 2 - WOENSDAG, 22 OKTOBER 2014
 
-var app = app || {};
+// Creeër namespace
+var movieApp = movieApp || {};
 
 (function() {
 
-	app.controller = {
+	// Start de functies binnen de eigenschap "controller" van variabele "movieApp" (ofwel de namespace)
+	movieApp.controller = {
 
-		init: function()
+		init: function() 
 		{
 
-			app.router.init();
-			app.sections.init();
+			movieApp.router.init();
+			movieApp.sections.init();
 
 		}
 
 	};
 
-	app.router = {
+	// Zorgt voor het schakelen tussen de navigatie elementen
+	// Zorgt voor het schakelen tussen genres en titels
+	movieApp.router = {
 
 		init: function() 
 		{
 
-			routie(
-			{
+			routie({
 			    'about': function() {
-			    	console.log("Hoi");
-			    	app.sections.toggle("about");
+			    	movieApp.sections.toggle("about");
 			    },
 
 			    'movies': function() {
-			    	console.log("Doei");
-			    	app.sections.toggle("movies");
-			    }
+			    	movieApp.sections.toggle("movies");
+			    },
+
+			    'movies/genre/:genre': function(genre){
+                    movieApp.content.genre(genre);
+                    Transparency.render(document.getElementById('movies'), movieApp.content.filteredData, movieApp.content.directives);
+                },
+
+                'movies/:title': function(title) {
+                    movieApp.content.title(title);
+                    movieApp.sections.toggle("detail");
+                    Transparency.render(document.getElementById('detail'), movieApp.content.filteredData, movieApp.content.directives);
+                },
+
 			});
 
 		}
 
 	};
 
-	app.content = {
+	movieApp.content = {
 
-		about: function()
-		{
+		// Simpele vorm van Transparency
+		about: function() {
 
 			var about = 
 			[
@@ -56,60 +69,113 @@ var app = app || {};
 
 		},
 
-		movies: function()
-		{
+		// XHR: method: "GET", de url van de API, wat er moet gebeuren als het proces succesvol is, vorm van de data
+		// .bind(this) zorgt ervoor dat "this" verwijst naar movieApp.content.movies i.p.v. Transparency.render
+		movies: function() {
+			movieApp.xhr.trigger("GET", "http://dennistel.nl/movies", movieApp.content.success.bind(this), "JSON");
+		},
 
-			var movies, directives;
-
-			var movies = 
-			[
-				{title: "Shawshank Redemption", releaseDate: "14 October 1994", cover: "Includes/Images/shawshank-redemption.jpg", description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."},
-				{title: "The Godfather", releaseDate: "24 March 1972", cover: "Includes/Images/the-godfather.jpg", description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."},
-				{title: "Pulp Fiction", releaseDate: "14 October 1994",cover: "Includes/Images/pulp-fiction.jpg", description: "The lives of two mob hit men, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."},
-				{title: "The Dark Knight", releaseDate: "18 July 2008", cover: "Includes/Images/the-dark-knight.jpg", description: "When Batman, Gordon and Harvey Dent launch an assault on the mob, they let the clown out of the box, the Joker, bent on turning Gotham on itself and bringing any heroes down to his level."}
-			];
-
-			directives = {
-				cover: 
-				{
-				    src: function(params) 
-				    {
-				    	return this.cover;
-				    }
-			  }
+		// Deze methode speelt af als er succesvol data wordt gehaald uit de API
+		success: function(text) {
+			// Zet JSON text om naar een Javascript object
+           	movieApp.content.movies = JSON.parse(text);
+           	// Controleer of de browser HTML5 support heeft voor storage.
+           	if(typeof(Storage) !== "undefined") 
+			{
+				// Werkt op principe van "name/value".
+				// JSON.stringify zet de methode movieApp.content.movies om naar een string, omdat alleen strings opgeslagen kunnen worden.
+				localStorage.setItem("movieData", JSON.stringify(movieApp.content.movies));
+				localStorage.getItem("movieData");
+			} else {
+			    console.log("Damn! No Web Storage support.. Better get that browser update :D");
 			};
+			// Roep de methode movieApp.content.underscoreProps aan
+			movieApp.content.underscoreProps();
+			Transparency.render(document.getElementById("movies"), this.movies, this.directives);
+		},
 
-			Transparency.render(document.getElementById("movies"), movies, directives);
+		// Methode met undescore; zorgt voor het ophalen van de scores, waarna het gemiddelde daarvan berekend en getoond wordt
+		underscoreProps: function() {
+			// _.map= creeër een array met alle waarden
+			// _.reduce= reduceert alle waarden binnen een array tot een enkele waarde
+			_.map(movieApp.content.movies, function (movie){
+				var movie
+                movie.score = _.reduce(movie.reviews, function(memo, review){ return memo + review.score; }, 0) / movie.reviews.length;
 
+                // Zet alle hoofdletters binnen een titel om naar kleine letters
+                // Vervang de aangegeven tekens met een "-"
+	            movie.url = movie.title.replace(/\s+/g, '-').toLowerCase();
+            });
+		},
+
+		// Methode met underscore; zorgt voor het filteren op de juiste genre
+		genre: function(filter){
+			// Creeër een nieuwe methode binnen movieApp.content genaamd "filteredData" die hetzelfde is als movieApp.content.movies
+            movieApp.content.filteredData = movieApp.content.movies;
+            // _.each= gaat over een array met waarden heen. 
+            _.each(movieApp.content.filteredData, function (movie, i){
+                movie.genre = _.contains(_.filter(movie.genres, function(genre){return genre;}), filter);
+            });
+            // Stelt movieApp.content.filteredData gelijk aan -
+            // _.where= kijkt naar alle waarden binnen een array, en geeft alleen de waarden terug met het juiste sleutelwoord. 
+            movieApp.content.filteredData = _.where(movieApp.content.movies, {genre:true});
+        },
+
+        // Methode met underscore; zorgt voor het filteren op de juiste titel
+        title: function(filter){
+            movieApp.content.filteredData = _.where(movieApp.content.movies, {url: filter});
+        },
+
+       	// Variabele van Transparecy
+       	// cover= hangt "cover" afkomstig uit de API aan de src (van een img)
+       	// title= hang "title" afkomstig uit de API aan de href (van een link)
+		directives: {
+			cover: {
+			    src: function(params) 
+			    {
+			    	return this.cover;
+			    }
+		  	},
+
+		  	title: {
+                href: function(params){
+                    return "#movies/" + this.url;
+                }
+            }
 		}
 
 	};
 
-	app.sections = {
+	movieApp.sections = {
 
-		init: function()
-		{
-
-			app.content.about();
-			app.content.movies();
-
+		// Start de functies binnen de methode "init"
+		init: function() {
+			movieApp.content.about();
+			movieApp.content.movies();
 		},
 
-		toggle: function(section)
-		{
+		// Methode waarmee geschakeld wordt tussen display:block en display:none
+		// Als "section" gelijk wordt gesteld aan waarde x, zet dan deze if statement in.
+		// Via routie wordt er een waarde aan "section" gehangen
+		toggle: function(section) {
 			if (section === "about") {
 				document.getElementById("about").classList.add("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
-			} else {
+				document.getElementById("detail").classList.remove("Active");
+			} else if(section === "movies") {
 				document.getElementById("ShowMovies").classList.add("Active");
+				document.getElementById("about").classList.remove("Active");
+				document.getElementById("detail").classList.remove("Active");
+			} else if(section === "detail") {
+				document.getElementById("detail").classList.add("Active");
+				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");
 			}
 		}
 
 	};
 
-	app.xhr = 
-	{
+	movieApp.xhr = {
 		trigger: function (type, url, success, data) 
 		{
 			var req = new XMLHttpRequest;
@@ -132,4 +198,5 @@ var app = app || {};
 
 })();
 
-app.controller.init();
+// Start de methode "init" binnen de eigenschap "controller" van het object "movieApp" (ofwel de namespace)
+movieApp.controller.init();
