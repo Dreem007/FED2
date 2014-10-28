@@ -84,10 +84,10 @@
 				</div>
 			</section>
 
-			<section id="filter" class="Movies">
+			<section id="ShowFilter" class="Movies">
 				<div class="Container">
 					<h1>Genre filter</h1>	
-					<article id="movies">
+					<article id="filter">
 						<header>
 							<h1><a data-bind="title" href=""></a></h1>
 							<p data-bind="averageScore"></p>
@@ -100,7 +100,10 @@
 						</figure>
 
 						<p data-bind="plot"></p>
-						<p id="Score" data-bind="score"></p>
+						<p class="Score">
+							Gemiddelde rating:
+							<span class="Score" data-bind="score"></span>
+						</p>
 					</article>
 				</div>
 			</section>

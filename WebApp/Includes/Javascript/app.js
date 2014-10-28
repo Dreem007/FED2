@@ -167,7 +167,7 @@ var movieApp = movieApp || {};
 				document.getElementById("NavMovies").classList.remove("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
-				document.getElementById("filter").classList.remove("Active");
+				document.getElementById("ShowFilter").classList.remove("Active");
 				document.getElementById("GenreNavigation").classList.remove("Active");
 			} else if(section === "movies") {
 				document.getElementById("ShowMovies").classList.add("Active");
@@ -177,16 +177,16 @@ var movieApp = movieApp || {};
 				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("about").classList.remove("Active");
 				document.getElementById("detail").classList.remove("Active");
-				document.getElementById("filter").classList.remove("Active");
+				document.getElementById("ShowFilter").classList.remove("Active");
 			} else if(section === "detail") {
 				document.getElementById("detail").classList.add("Active");
 				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("Welcome").classList.remove("Active");
 				document.getElementById("ShowMovies").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");
-				document.getElementById("filter").classList.remove("Active");
+				document.getElementById("ShowFilter").classList.remove("Active");
 			} else if(section === "filter") {
-				document.getElementById("filter").classList.add("Active");
+				document.getElementById("ShowFilter").classList.add("Active");
 				document.getElementById("GenreNavigation").classList.add("Active");
 				document.getElementById("Welcome").classList.remove("Active");
 				document.getElementById("about").classList.remove("Active");

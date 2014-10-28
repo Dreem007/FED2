@@ -205,6 +205,7 @@ section#Welcome
 
 	.Movies article .Score
 	{
+		line-height:45px;
 		font-size:40px;
 		color:#4d4d4d;
 		margin-top:20px;
@@ -233,15 +234,22 @@ section#Welcome
 	margin-bottom:30px;
 }
 
-#detail em, #detail em time
+#detail img
 {
-	font-size:15px;
-	color:#4d4d4d;
+	-webkit-transition:all 200ms linear;
+     -khtml-transition:all 200ms linear;
+       -moz-transition:all 200ms linear;
+         -o-transition:all 200ms linear;
+            transition:all 200ms linear;
 }
 
-	#detail em time
+	#detail img:hover
 	{
-		text-decoration:underline;
+		-webkit-transform:scale(1.1);
+	       -moz-transform:scale(1.1);
+	      	-ms-transform:scale(1.1);
+	       	 -o-transform:scale(1.1);
+	          	transform:scale(1.1);
 	}
 
 #detail p
