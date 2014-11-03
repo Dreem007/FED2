@@ -1,0 +1,1182 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', '-g' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose request where is /grunt-cli
+5 verbose request registry https://registry.npmjs.org/
+6 verbose request id 35d0bbd3f51fc521
+7 verbose url raw /grunt-cli
+8 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+9 verbose url resolved https://registry.npmjs.org/grunt-cli
+10 verbose request where is https://registry.npmjs.org/grunt-cli
+11 info trying registry request attempt 1 at 17:03:37
+12 verbose etag "6K6VZSDEG6YSFJ4DJW2IHT139"
+13 http GET https://registry.npmjs.org/grunt-cli
+14 verbose request where is /npm
+15 verbose request registry https://registry.npmjs.org/
+16 verbose url raw /npm
+17 verbose url resolving [ 'https://registry.npmjs.org/', './npm' ]
+18 verbose url resolved https://registry.npmjs.org/npm
+19 verbose request where is https://registry.npmjs.org/npm
+20 info trying registry request attempt 1 at 17:03:37
+21 verbose etag "DIE40YOQCSB43RFXKILY1BZ4D"
+22 http GET https://registry.npmjs.org/npm
+23 http 304 https://registry.npmjs.org/grunt-cli
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+24 silly registry.get     server: 'Apache',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:37 GMT',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     etag: '"6K6VZSDEG6YSFJ4DJW2IHT139"',
+24 silly registry.get     age: '22',
+24 silly registry.get     'x-served-by': 'cache-ams4148-AMS',
+24 silly registry.get     'x-cache': 'HIT',
+24 silly registry.get     'x-cache-hits': '1',
+24 silly registry.get     'x-timer': 'S1415030617.566306,VS0,VE0',
+24 silly registry.get     vary: 'Accept',
+24 silly registry.get     'content-length': '0',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 verbose etag https://registry.npmjs.org/grunt-cli from cache
+26 http 304 https://registry.npmjs.org/npm
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:37 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"DIE40YOQCSB43RFXKILY1BZ4D"',
+27 silly registry.get     age: '22',
+27 silly registry.get     'x-served-by': 'cache-ams4136-AMS',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1415030617.567096,VS0,VE5',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/npm from cache
+29 verbose request where is /nopt
+30 verbose request registry https://registry.npmjs.org/
+31 verbose url raw /nopt
+32 verbose url resolving [ 'https://registry.npmjs.org/', './nopt' ]
+33 verbose url resolved https://registry.npmjs.org/nopt
+34 verbose request where is https://registry.npmjs.org/nopt
+35 info trying registry request attempt 1 at 17:03:37
+36 verbose etag "2GWKPD9CYD6ZLDZ9J2A2BHFGO"
+37 http GET https://registry.npmjs.org/nopt
+38 verbose request where is /findup-sync
+39 verbose request registry https://registry.npmjs.org/
+40 verbose url raw /findup-sync
+41 verbose url resolving [ 'https://registry.npmjs.org/', './findup-sync' ]
+42 verbose url resolved https://registry.npmjs.org/findup-sync
+43 verbose request where is https://registry.npmjs.org/findup-sync
+44 info trying registry request attempt 1 at 17:03:37
+45 verbose etag "4LEKH44R5GDQN14Q3HPISN3QW"
+46 http GET https://registry.npmjs.org/findup-sync
+47 verbose request where is /resolve
+48 verbose request registry https://registry.npmjs.org/
+49 verbose url raw /resolve
+50 verbose url resolving [ 'https://registry.npmjs.org/', './resolve' ]
+51 verbose url resolved https://registry.npmjs.org/resolve
+52 verbose request where is https://registry.npmjs.org/resolve
+53 info trying registry request attempt 1 at 17:03:37
+54 verbose etag "E8EO3VI6KDFATVHO865FSU1SZ"
+55 http GET https://registry.npmjs.org/resolve
+56 http 304 https://registry.npmjs.org/nopt
+57 silly registry.get cb [ 304,
+57 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+57 silly registry.get     server: 'Apache',
+57 silly registry.get     via: '1.1 varnish',
+57 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:02 GMT',
+57 silly registry.get     'cache-control': 'max-age=60',
+57 silly registry.get     etag: '"2GWKPD9CYD6ZLDZ9J2A2BHFGO"',
+57 silly registry.get     age: '49',
+57 silly registry.get     'x-served-by': 'cache-ams4135-AMS',
+57 silly registry.get     'x-cache': 'HIT',
+57 silly registry.get     'x-cache-hits': '3',
+57 silly registry.get     'x-timer': 'S1415030617.752817,VS0,VE0',
+57 silly registry.get     vary: 'Accept',
+57 silly registry.get     'content-length': '0',
+57 silly registry.get     'keep-alive': 'timeout=10, max=50',
+57 silly registry.get     connection: 'Keep-Alive' } ]
+58 verbose etag https://registry.npmjs.org/nopt from cache
+59 http 304 https://registry.npmjs.org/findup-sync
+60 silly registry.get cb [ 304,
+60 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+60 silly registry.get     server: 'Apache',
+60 silly registry.get     via: '1.1 varnish',
+60 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:37 GMT',
+60 silly registry.get     'cache-control': 'max-age=60',
+60 silly registry.get     etag: '"4LEKH44R5GDQN14Q3HPISN3QW"',
+60 silly registry.get     age: '12',
+60 silly registry.get     'x-served-by': 'cache-ams4144-AMS',
+60 silly registry.get     'x-cache': 'HIT',
+60 silly registry.get     'x-cache-hits': '1',
+60 silly registry.get     'x-timer': 'S1415030617.752756,VS0,VE0',
+60 silly registry.get     vary: 'Accept',
+60 silly registry.get     'content-length': '0',
+60 silly registry.get     'keep-alive': 'timeout=10, max=50',
+60 silly registry.get     connection: 'Keep-Alive' } ]
+61 verbose etag https://registry.npmjs.org/findup-sync from cache
+62 http 304 https://registry.npmjs.org/resolve
+63 silly registry.get cb [ 304,
+63 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+63 silly registry.get     server: 'Apache',
+63 silly registry.get     via: '1.1 varnish',
+63 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:37 GMT',
+63 silly registry.get     'cache-control': 'max-age=60',
+63 silly registry.get     etag: '"E8EO3VI6KDFATVHO865FSU1SZ"',
+63 silly registry.get     age: '45',
+63 silly registry.get     'x-served-by': 'cache-ams4134-AMS',
+63 silly registry.get     'x-cache': 'HIT',
+63 silly registry.get     'x-cache-hits': '1',
+63 silly registry.get     'x-timer': 'S1415030617.767238,VS0,VE0',
+63 silly registry.get     vary: 'Accept',
+63 silly registry.get     'content-length': '0',
+63 silly registry.get     'keep-alive': 'timeout=10, max=50',
+63 silly registry.get     connection: 'Keep-Alive' } ]
+64 verbose etag https://registry.npmjs.org/resolve from cache
+65 verbose request where is /glob
+66 verbose request registry https://registry.npmjs.org/
+67 verbose url raw /glob
+68 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+69 verbose url resolved https://registry.npmjs.org/glob
+70 verbose request where is https://registry.npmjs.org/glob
+71 info trying registry request attempt 1 at 17:03:37
+72 verbose etag "YVVOYS7EUF19W7GET05G81FZ"
+73 http GET https://registry.npmjs.org/glob
+74 verbose request where is /lodash
+75 verbose request registry https://registry.npmjs.org/
+76 verbose url raw /lodash
+77 verbose url resolving [ 'https://registry.npmjs.org/', './lodash' ]
+78 verbose url resolved https://registry.npmjs.org/lodash
+79 verbose request where is https://registry.npmjs.org/lodash
+80 info trying registry request attempt 1 at 17:03:38
+81 verbose etag "BI0ZPNV47JPGYK09JDH3GAGXY"
+82 http GET https://registry.npmjs.org/lodash
+83 http 304 https://registry.npmjs.org/glob
+84 silly registry.get cb [ 304,
+84 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+84 silly registry.get     server: 'Apache',
+84 silly registry.get     via: '1.1 varnish',
+84 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:10 GMT',
+84 silly registry.get     'cache-control': 'max-age=60',
+84 silly registry.get     etag: '"YVVOYS7EUF19W7GET05G81FZ"',
+84 silly registry.get     age: '57',
+84 silly registry.get     'x-served-by': 'cache-ams4124-AMS',
+84 silly registry.get     'x-cache': 'HIT',
+84 silly registry.get     'x-cache-hits': '4',
+84 silly registry.get     'x-timer': 'S1415030617.838426,VS0,VE0',
+84 silly registry.get     vary: 'Accept',
+84 silly registry.get     'content-length': '0',
+84 silly registry.get     'keep-alive': 'timeout=10, max=50',
+84 silly registry.get     connection: 'Keep-Alive' } ]
+85 verbose etag https://registry.npmjs.org/glob from cache
+86 http 304 https://registry.npmjs.org/lodash
+87 silly registry.get cb [ 304,
+87 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:37 GMT',
+87 silly registry.get     server: 'Apache',
+87 silly registry.get     via: '1.1 varnish',
+87 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:37 GMT',
+87 silly registry.get     'cache-control': 'max-age=60',
+87 silly registry.get     etag: '"BI0ZPNV47JPGYK09JDH3GAGXY"',
+87 silly registry.get     age: '43',
+87 silly registry.get     'x-served-by': 'cache-ams4129-AMS',
+87 silly registry.get     'x-cache': 'HIT',
+87 silly registry.get     'x-cache-hits': '1',
+87 silly registry.get     'x-timer': 'S1415030617.842334,VS0,VE0',
+87 silly registry.get     vary: 'Accept',
+87 silly registry.get     'content-length': '0',
+87 silly registry.get     'keep-alive': 'timeout=10, max=50',
+87 silly registry.get     connection: 'Keep-Alive' } ]
+88 verbose etag https://registry.npmjs.org/lodash from cache
+89 info outdated updating [ [ '/usr/local/lib', 'npm', '1.4.28', '2.1.6', '2.1.6', 'latest' ],
+89 info outdated   [ '/usr/local/lib/node_modules/grunt-cli',
+89 info outdated     'nopt',
+89 info outdated     '1.0.10',
+89 info outdated     '1.0.10',
+89 info outdated     '3.0.1',
+89 info outdated     '~1.0.10' ],
+89 info outdated   [ '/usr/local/lib/node_modules/grunt-cli',
+89 info outdated     'resolve',
+89 info outdated     '0.3.1',
+89 info outdated     '0.3.1',
+89 info outdated     '1.0.0',
+89 info outdated     '~0.3.1' ],
+89 info outdated   [ '/usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync',
+89 info outdated     'glob',
+89 info outdated     '3.2.11',
+89 info outdated     '3.2.11',
+89 info outdated     '4.0.6',
+89 info outdated     '~3.2.9' ] ]
+90 verbose install where,what [ '/usr/local/lib', [ 'npm@2.1.6' ] ]
+91 verbose install where,what [ '/usr/local/lib/node_modules/grunt-cli', [ 'nopt@1.0.10' ] ]
+92 verbose install where,what [ '/usr/local/lib/node_modules/grunt-cli', [ 'resolve@0.3.1' ] ]
+93 verbose install where,what [ '/usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync',
+93 verbose install   [ 'glob@3.2.11' ] ]
+94 verbose readDependencies using package.json deps
+95 verbose cache add [ 'nopt@1.0.10', null ]
+96 verbose cache add name=undefined spec="nopt@1.0.10" args=["nopt@1.0.10",null]
+97 verbose parsed url { protocol: null,
+97 verbose parsed url   slashes: null,
+97 verbose parsed url   auth: null,
+97 verbose parsed url   host: null,
+97 verbose parsed url   port: null,
+97 verbose parsed url   hostname: null,
+97 verbose parsed url   hash: null,
+97 verbose parsed url   search: null,
+97 verbose parsed url   query: null,
+97 verbose parsed url   pathname: 'nopt@1.0.10',
+97 verbose parsed url   path: 'nopt@1.0.10',
+97 verbose parsed url   href: 'nopt@1.0.10' }
+98 verbose readDependencies using package.json deps
+99 verbose cache add [ 'resolve@0.3.1', null ]
+100 verbose cache add name=undefined spec="resolve@0.3.1" args=["resolve@0.3.1",null]
+101 verbose parsed url { protocol: null,
+101 verbose parsed url   slashes: null,
+101 verbose parsed url   auth: null,
+101 verbose parsed url   host: null,
+101 verbose parsed url   port: null,
+101 verbose parsed url   hostname: null,
+101 verbose parsed url   hash: null,
+101 verbose parsed url   search: null,
+101 verbose parsed url   query: null,
+101 verbose parsed url   pathname: 'resolve@0.3.1',
+101 verbose parsed url   path: 'resolve@0.3.1',
+101 verbose parsed url   href: 'resolve@0.3.1' }
+102 verbose readDependencies using package.json deps
+103 verbose cache add [ 'glob@3.2.11', null ]
+104 verbose cache add name=undefined spec="glob@3.2.11" args=["glob@3.2.11",null]
+105 verbose parsed url { protocol: null,
+105 verbose parsed url   slashes: null,
+105 verbose parsed url   auth: null,
+105 verbose parsed url   host: null,
+105 verbose parsed url   port: null,
+105 verbose parsed url   hostname: null,
+105 verbose parsed url   hash: null,
+105 verbose parsed url   search: null,
+105 verbose parsed url   query: null,
+105 verbose parsed url   pathname: 'glob@3.2.11',
+105 verbose parsed url   path: 'glob@3.2.11',
+105 verbose parsed url   href: 'glob@3.2.11' }
+106 verbose cache add name="nopt" spec="1.0.10" args=["nopt","1.0.10"]
+107 verbose parsed url { protocol: null,
+107 verbose parsed url   slashes: null,
+107 verbose parsed url   auth: null,
+107 verbose parsed url   host: null,
+107 verbose parsed url   port: null,
+107 verbose parsed url   hostname: null,
+107 verbose parsed url   hash: null,
+107 verbose parsed url   search: null,
+107 verbose parsed url   query: null,
+107 verbose parsed url   pathname: '1.0.10',
+107 verbose parsed url   path: '1.0.10',
+107 verbose parsed url   href: '1.0.10' }
+108 verbose addNamed [ 'nopt', '1.0.10' ]
+109 verbose addNamed [ '1.0.10', '1.0.10' ]
+110 verbose cache add name="resolve" spec="0.3.1" args=["resolve","0.3.1"]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: '0.3.1',
+111 verbose parsed url   path: '0.3.1',
+111 verbose parsed url   href: '0.3.1' }
+112 verbose addNamed [ 'resolve', '0.3.1' ]
+113 verbose addNamed [ '0.3.1', '0.3.1' ]
+114 verbose cache add name="glob" spec="3.2.11" args=["glob","3.2.11"]
+115 verbose parsed url { protocol: null,
+115 verbose parsed url   slashes: null,
+115 verbose parsed url   auth: null,
+115 verbose parsed url   host: null,
+115 verbose parsed url   port: null,
+115 verbose parsed url   hostname: null,
+115 verbose parsed url   hash: null,
+115 verbose parsed url   search: null,
+115 verbose parsed url   query: null,
+115 verbose parsed url   pathname: '3.2.11',
+115 verbose parsed url   path: '3.2.11',
+115 verbose parsed url   href: '3.2.11' }
+116 verbose addNamed [ 'glob', '3.2.11' ]
+117 verbose addNamed [ '3.2.11', '3.2.11' ]
+118 silly lockFile 1be903a1-nopt-1-0-10 nopt@1.0.10
+119 verbose lock nopt@1.0.10 /Users/Guitar/.npm/1be903a1-nopt-1-0-10.lock
+120 silly lockFile 95464470-resolve-0-3-1 resolve@0.3.1
+121 verbose lock resolve@0.3.1 /Users/Guitar/.npm/95464470-resolve-0-3-1.lock
+122 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+123 verbose lock glob@3.2.11 /Users/Guitar/.npm/3fffafa6-glob-3-2-11.lock
+124 verbose cache add [ 'npm@2.1.6', null ]
+125 verbose cache add name=undefined spec="npm@2.1.6" args=["npm@2.1.6",null]
+126 verbose parsed url { protocol: null,
+126 verbose parsed url   slashes: null,
+126 verbose parsed url   auth: null,
+126 verbose parsed url   host: null,
+126 verbose parsed url   port: null,
+126 verbose parsed url   hostname: null,
+126 verbose parsed url   hash: null,
+126 verbose parsed url   search: null,
+126 verbose parsed url   query: null,
+126 verbose parsed url   pathname: 'npm@2.1.6',
+126 verbose parsed url   path: 'npm@2.1.6',
+126 verbose parsed url   href: 'npm@2.1.6' }
+127 verbose cache add name="npm" spec="2.1.6" args=["npm","2.1.6"]
+128 verbose parsed url { protocol: null,
+128 verbose parsed url   slashes: null,
+128 verbose parsed url   auth: null,
+128 verbose parsed url   host: null,
+128 verbose parsed url   port: null,
+128 verbose parsed url   hostname: null,
+128 verbose parsed url   hash: null,
+128 verbose parsed url   search: null,
+128 verbose parsed url   query: null,
+128 verbose parsed url   pathname: '2.1.6',
+128 verbose parsed url   path: '2.1.6',
+128 verbose parsed url   href: '2.1.6' }
+129 verbose addNamed [ 'npm', '2.1.6' ]
+130 verbose addNamed [ '2.1.6', '2.1.6' ]
+131 silly lockFile de198452-npm-2-1-6 npm@2.1.6
+132 verbose lock npm@2.1.6 /Users/Guitar/.npm/de198452-npm-2-1-6.lock
+133 verbose registry.get https://registry.npmjs.org/nopt not expired, no request
+134 verbose registry.get https://registry.npmjs.org/resolve not expired, no request
+135 verbose registry.get https://registry.npmjs.org/glob not expired, no request
+136 verbose registry.get https://registry.npmjs.org/npm not expired, no request
+137 silly lockFile 1be903a1-nopt-1-0-10 nopt@1.0.10
+138 silly lockFile 1be903a1-nopt-1-0-10 nopt@1.0.10
+139 silly lockFile 95464470-resolve-0-3-1 resolve@0.3.1
+140 silly lockFile 95464470-resolve-0-3-1 resolve@0.3.1
+141 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+142 silly lockFile 3fffafa6-glob-3-2-11 glob@3.2.11
+143 silly lockFile de198452-npm-2-1-6 npm@2.1.6
+144 silly lockFile de198452-npm-2-1-6 npm@2.1.6
+145 silly resolved [ { version: '2.1.6',
+145 silly resolved     name: 'npm',
+145 silly resolved     description: 'A package manager for node',
+145 silly resolved     keywords: [ 'package manager', 'modules', 'install', 'package.json' ],
+145 silly resolved     preferGlobal: true,
+145 silly resolved     config: { publishtest: false },
+145 silly resolved     homepage: 'https://npmjs.org/doc/',
+145 silly resolved     author:
+145 silly resolved      { name: 'Isaac Z. Schlueter',
+145 silly resolved        email: 'i@izs.me',
+145 silly resolved        url: 'http://blog.izs.me' },
+145 silly resolved     repository: { type: 'git', url: 'https://github.com/npm/npm' },
+145 silly resolved     bugs:
+145 silly resolved      { url: 'http://github.com/npm/npm/issues',
+145 silly resolved        email: 'npm-@googlegroups.com' },
+145 silly resolved     directories: { doc: './doc', man: './man', lib: './lib', bin: './bin' },
+145 silly resolved     main: './lib/npm.js',
+145 silly resolved     bin: { npm: './bin/npm-cli.js' },
+145 silly resolved     dependencies:
+145 silly resolved      { abbrev: '~1.0.5',
+145 silly resolved        ansi: '~0.3.0',
+145 silly resolved        ansicolors: '~0.3.2',
+145 silly resolved        ansistyles: '~0.1.3',
+145 silly resolved        archy: '~1.0.0',
+145 silly resolved        'async-some': '~1.0.1',
+145 silly resolved        'block-stream': '0.0.7',
+145 silly resolved        'char-spinner': '~1.0.1',
+145 silly resolved        'child-process-close': '~0.1.1',
+145 silly resolved        chmodr: '~0.1.0',
+145 silly resolved        chownr: '0',
+145 silly resolved        'cmd-shim': '~2.0.1',
+145 silly resolved        columnify: '~1.2.1',
+145 silly resolved        'config-chain': '~1.1.8',
+145 silly resolved        dezalgo: '~1.0.1',
+145 silly resolved        editor: '~0.1.0',
+145 silly resolved        'fs-vacuum': '~1.2.1',
+145 silly resolved        'fs-write-stream-atomic': '~1.0.2',
+145 silly resolved        fstream: '~1.0.2',
+145 silly resolved        'fstream-npm': '~1.0.1',
+145 silly resolved        'github-url-from-git': '~1.4.0',
+145 silly resolved        'github-url-from-username-repo': '~1.0.2',
+145 silly resolved        glob: '~4.0.6',
+145 silly resolved        'graceful-fs': '~3.0.4',
+145 silly resolved        inflight: '~1.0.4',
+145 silly resolved        inherits: '~2.0.1',
+145 silly resolved        ini: '~1.3.0',
+145 silly resolved        'init-package-json': '~1.1.1',
+145 silly resolved        lockfile: '~1.0.0',
+145 silly resolved        'lru-cache': '~2.5.0',
+145 silly resolved        minimatch: '~1.0.0',
+145 silly resolved        mkdirp: '~0.5.0',
+145 silly resolved        'node-gyp': '~1.0.1',
+145 silly resolved        nopt: '~3.0.1',
+145 silly resolved        'normalize-package-data': '~1.0.3',
+145 silly resolved        'npm-cache-filename': '~1.0.1',
+145 silly resolved        'npm-install-checks': '~1.0.2',
+145 silly resolved        'npm-package-arg': '~2.1.3',
+145 silly resolved        'npm-registry-client': '~3.2.4',
+145 silly resolved        'npm-user-validate': '~0.1.1',
+145 silly resolved        npmlog: '~0.1.1',
+145 silly resolved        once: '~1.3.1',
+145 silly resolved        opener: '~1.4.0',
+145 silly resolved        osenv: '~0.1.0',
+145 silly resolved        'path-is-inside': '~1.0.0',
+145 silly resolved        read: '~1.0.4',
+145 silly resolved        'read-installed': '~3.1.2',
+145 silly resolved        'read-package-json': '~1.2.7',
+145 silly resolved        'readable-stream': '~1.0.32',
+145 silly resolved        'realize-package-specifier': '~1.2.0',
+145 silly resolved        request: '~2.46.0',
+145 silly resolved        retry: '~0.6.1',
+145 silly resolved        rimraf: '~2.2.8',
+145 silly resolved        semver: '~4.1.0',
+145 silly resolved        sha: '~1.3.0',
+145 silly resolved        slide: '~1.1.6',
+145 silly resolved        'sorted-object': '~1.0.0',
+145 silly resolved        tar: '~1.0.1',
+145 silly resolved        'text-table': '~0.2.0',
+145 silly resolved        'uid-number': '0.0.5',
+145 silly resolved        which: '1',
+145 silly resolved        wrappy: '~1.0.1',
+145 silly resolved        'write-file-atomic': '~1.1.0' },
+145 silly resolved     bundleDependencies:
+145 silly resolved      [ 'abbrev',
+145 silly resolved        'ansi',
+145 silly resolved        'ansicolors',
+145 silly resolved        'ansistyles',
+145 silly resolved        'archy',
+145 silly resolved        'async-some',
+145 silly resolved        'block-stream',
+145 silly resolved        'char-spinner',
+145 silly resolved        'child-process-close',
+145 silly resolved        'chmodr',
+145 silly resolved        'chownr',
+145 silly resolved        'cmd-shim',
+145 silly resolved        'columnify',
+145 silly resolved        'config-chain',
+145 silly resolved        'dezalgo',
+145 silly resolved        'editor',
+145 silly resolved        'fs-vacuum',
+145 silly resolved        'fs-write-stream-atomic',
+145 silly resolved        'fstream',
+145 silly resolved        'fstream-npm',
+145 silly resolved        'github-url-from-git',
+145 silly resolved        'github-url-from-username-repo',
+145 silly resolved        'glob',
+145 silly resolved        'graceful-fs',
+145 silly resolved        'inflight',
+145 silly resolved        'inherits',
+145 silly resolved        'ini',
+145 silly resolved        'init-package-json',
+145 silly resolved        'lockfile',
+145 silly resolved        'lru-cache',
+145 silly resolved        'minimatch',
+145 silly resolved        'mkdirp',
+145 silly resolved        'node-gyp',
+145 silly resolved        'nopt',
+145 silly resolved        'normalize-package-data',
+145 silly resolved        'npm-cache-filename',
+145 silly resolved        'npm-install-checks',
+145 silly resolved        'npm-package-arg',
+145 silly resolved        'npm-registry-client',
+145 silly resolved        'npm-user-validate',
+145 silly resolved        'npmlog',
+145 silly resolved        'once',
+145 silly resolved        'opener',
+145 silly resolved        'osenv',
+145 silly resolved        'path-is-inside',
+145 silly resolved        'read',
+145 silly resolved        'read-installed',
+145 silly resolved        'read-package-json',
+145 silly resolved        'readable-stream',
+145 silly resolved        'realize-package-specifier',
+145 silly resolved        'request',
+145 silly resolved        'retry',
+145 silly resolved        'rimraf',
+145 silly resolved        'semver',
+145 silly resolved        'sha',
+145 silly resolved        'slide',
+145 silly resolved        'sorted-object',
+145 silly resolved        'tar',
+145 silly resolved        'text-table',
+145 silly resolved        'uid-number',
+145 silly resolved        'which',
+145 silly resolved        'wrappy',
+145 silly resolved        'write-file-atomic' ],
+145 silly resolved     devDependencies:
+145 silly resolved      { marked: '~0.3.2',
+145 silly resolved        'marked-man': '~0.1.4',
+145 silly resolved        nock: '~0.48.1',
+145 silly resolved        'npm-registry-couchapp': '~2.6.2',
+145 silly resolved        'npm-registry-mock': '~0.6.3',
+145 silly resolved        'require-inject': '~1.1.0',
+145 silly resolved        tap: '~0.4.12' },
+145 silly resolved     scripts:
+145 silly resolved      { 'test-legacy': 'node ./test/run.js',
+145 silly resolved        test: 'tap --timeout 120 test/tap/*.js',
+145 silly resolved        tap: 'tap --timeout 120 test/tap/*.js',
+145 silly resolved        'test-all': 'node ./test/run.js && tap test/tap/*.js',
+145 silly resolved        prepublish: 'node bin/npm-cli.js prune --prefix=. --no-global && rm -rf test/*/*/node_modules && make -j8 doc',
+145 silly resolved        dumpconf: 'env | grep npm | sort | uniq' },
+145 silly resolved     license: 'Artistic-2.0',
+145 silly resolved     man:
+145 silly resolved      [ '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-README.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-adduser.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-bin.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-bugs.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-build.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-bundle.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-cache.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-completion.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-config.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-dedupe.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-deprecate.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-docs.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-edit.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-explore.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-help-search.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-help.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-init.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-install.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-link.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-ls.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-outdated.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-owner.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-pack.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-prefix.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-prune.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-publish.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-rebuild.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-repo.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-restart.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-rm.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-root.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-run-script.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-search.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-shrinkwrap.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-star.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-stars.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-start.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-stop.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-submodule.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-tag.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-test.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-uninstall.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-unpublish.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-update.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-version.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-view.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm-whoami.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man1/npm.1',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-bin.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-bugs.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-cache.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-commands.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-config.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-deprecate.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-docs.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-edit.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-explore.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-help-search.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-init.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-install.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-link.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-load.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-ls.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-outdated.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-owner.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-pack.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-prefix.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-prune.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-publish.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-rebuild.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-repo.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-restart.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-root.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-run-script.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-search.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-shrinkwrap.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-start.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-stop.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-submodule.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-tag.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-test.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-uninstall.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-unpublish.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-update.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-version.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-view.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm-whoami.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man3/npm.3',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man5/npm-folders.5',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man5/npm-global.5',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man5/npm-json.5',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man5/npmrc.5',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man5/package.json.5',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-coding-style.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-config.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-developers.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-disputes.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-faq.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-index.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-registry.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-scope.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/npm-scripts.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/removing-npm.7',
+145 silly resolved        '/Users/ogd/Documents/projects/npm/npm/man/man7/semver.7' ],
+145 silly resolved     contributors:
+145 silly resolved      [ [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object],
+145 silly resolved        [Object] ],
+145 silly resolved     gitHead: '19022ff22758922c4fad46d4e21cbd7526e5d2f3',
+145 silly resolved     _id: 'npm@2.1.6',
+145 silly resolved     _shasum: 'a28e8b44f910b9ab056aa0b73c13c1f9459c9b37',
+145 silly resolved     _from: 'npm@2.1.6',
+145 silly resolved     _npmVersion: '2.1.6',
+145 silly resolved     _nodeVersion: '0.10.32',
+145 silly resolved     _npmUser: { name: 'othiym23', email: 'ogd@aoaioxxysz.net' },
+145 silly resolved     maintainers: [ [Object], [Object] ],
+145 silly resolved     dist:
+145 silly resolved      { shasum: 'a28e8b44f910b9ab056aa0b73c13c1f9459c9b37',
+145 silly resolved        tarball: 'http://registry.npmjs.org/npm/-/npm-2.1.6.tgz' },
+145 silly resolved     _resolved: 'https://registry.npmjs.org/npm/-/npm-2.1.6.tgz',
+145 silly resolved     readme: 'ERROR: No README data found!' } ]
+146 info install npm@2.1.6 into /usr/local/lib
+147 info installOne npm@2.1.6
+148 silly resolved [ { name: 'nopt',
+148 silly resolved     version: '1.0.10',
+148 silly resolved     description: 'Option parsing for Node, supporting types, shorthands, etc. Used by npm.',
+148 silly resolved     author:
+148 silly resolved      { name: 'Isaac Z. Schlueter',
+148 silly resolved        email: 'i@izs.me',
+148 silly resolved        url: 'http://blog.izs.me/' },
+148 silly resolved     main: 'lib/nopt.js',
+148 silly resolved     scripts: { test: 'node lib/nopt.js' },
+148 silly resolved     repository: { type: 'git', url: 'git://github.com/isaacs/nopt.git' },
+148 silly resolved     bin: { nopt: './bin/nopt.js' },
+148 silly resolved     license:
+148 silly resolved      { type: 'MIT',
+148 silly resolved        url: 'https://github.com/isaacs/nopt/raw/master/LICENSE' },
+148 silly resolved     dependencies: { abbrev: '1' },
+148 silly resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+148 silly resolved     _id: 'nopt@1.0.10',
+148 silly resolved     devDependencies: {},
+148 silly resolved     engines: { node: '*' },
+148 silly resolved     _engineSupported: true,
+148 silly resolved     _npmVersion: '1.0.93',
+148 silly resolved     _nodeVersion: 'v0.5.9-pre',
+148 silly resolved     _defaultsLoaded: true,
+148 silly resolved     dist:
+148 silly resolved      { shasum: '6ddd21bd2a31417b92727dd585f8a6f37608ebee',
+148 silly resolved        tarball: 'http://registry.npmjs.org/nopt/-/nopt-1.0.10.tgz' },
+148 silly resolved     maintainers: [ [Object] ],
+148 silly resolved     directories: {},
+148 silly resolved     _shasum: '6ddd21bd2a31417b92727dd585f8a6f37608ebee',
+148 silly resolved     _from: 'nopt@1.0.10',
+148 silly resolved     _resolved: 'https://registry.npmjs.org/nopt/-/nopt-1.0.10.tgz',
+148 silly resolved     bugs: { url: 'https://github.com/isaacs/nopt/issues' },
+148 silly resolved     readme: 'ERROR: No README data found!',
+148 silly resolved     homepage: 'https://github.com/isaacs/nopt' } ]
+149 info install nopt@1.0.10 into /usr/local/lib/node_modules/grunt-cli
+150 info installOne nopt@1.0.10
+151 silly resolved [ { name: 'resolve',
+151 silly resolved     description: 'resolve like require.resolve() on behalf of files asynchronously and synchronously',
+151 silly resolved     version: '0.3.1',
+151 silly resolved     repository:
+151 silly resolved      { type: 'git',
+151 silly resolved        url: 'git://github.com/substack/node-resolve.git' },
+151 silly resolved     main: 'index.js',
+151 silly resolved     keywords: [ 'resolve', 'require', 'node', 'module' ],
+151 silly resolved     scripts: { test: 'tap test/*.js' },
+151 silly resolved     devDependencies: { tap: '~0.4.0' },
+151 silly resolved     license: 'MIT',
+151 silly resolved     author:
+151 silly resolved      { name: 'James Halliday',
+151 silly resolved        email: 'mail@substack.net',
+151 silly resolved        url: 'http://substack.net' },
+151 silly resolved     _id: 'resolve@0.3.1',
+151 silly resolved     dist:
+151 silly resolved      { shasum: '34c63447c664c70598d1c9b126fc43b2a24310a4',
+151 silly resolved        tarball: 'http://registry.npmjs.org/resolve/-/resolve-0.3.1.tgz' },
+151 silly resolved     _from: 'resolve@0.3.1',
+151 silly resolved     _npmVersion: '1.2.2',
+151 silly resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+151 silly resolved     maintainers: [ [Object] ],
+151 silly resolved     directories: {},
+151 silly resolved     _shasum: '34c63447c664c70598d1c9b126fc43b2a24310a4',
+151 silly resolved     _resolved: 'https://registry.npmjs.org/resolve/-/resolve-0.3.1.tgz',
+151 silly resolved     bugs: { url: 'https://github.com/substack/node-resolve/issues' },
+151 silly resolved     readme: 'ERROR: No README data found!',
+151 silly resolved     homepage: 'https://github.com/substack/node-resolve' } ]
+152 info install resolve@0.3.1 into /usr/local/lib/node_modules/grunt-cli
+153 info installOne resolve@0.3.1
+154 silly resolved [ { author:
+154 silly resolved      { name: 'Isaac Z. Schlueter',
+154 silly resolved        email: 'i@izs.me',
+154 silly resolved        url: 'http://blog.izs.me/' },
+154 silly resolved     name: 'glob',
+154 silly resolved     description: 'a little globber',
+154 silly resolved     version: '3.2.11',
+154 silly resolved     repository: { type: 'git', url: 'git://github.com/isaacs/node-glob.git' },
+154 silly resolved     main: 'glob.js',
+154 silly resolved     engines: { node: '*' },
+154 silly resolved     dependencies: { inherits: '2', minimatch: '0.3' },
+154 silly resolved     devDependencies: { tap: '~0.4.0', mkdirp: '0', rimraf: '1' },
+154 silly resolved     scripts:
+154 silly resolved      { test: 'tap test/*.js',
+154 silly resolved        'test-regen': 'TEST_REGEN=1 node test/00-setup.js' },
+154 silly resolved     license: 'BSD',
+154 silly resolved     gitHead: '73f57e99510582b2024b762305970ebcf9b70aa2',
+154 silly resolved     bugs: { url: 'https://github.com/isaacs/node-glob/issues' },
+154 silly resolved     homepage: 'https://github.com/isaacs/node-glob',
+154 silly resolved     _id: 'glob@3.2.11',
+154 silly resolved     _shasum: '4a973f635b9190f715d10987d5c00fd2815ebe3d',
+154 silly resolved     _from: 'glob@3.2.11',
+154 silly resolved     _npmVersion: '1.4.10',
+154 silly resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+154 silly resolved     maintainers: [ [Object] ],
+154 silly resolved     dist:
+154 silly resolved      { shasum: '4a973f635b9190f715d10987d5c00fd2815ebe3d',
+154 silly resolved        tarball: 'http://registry.npmjs.org/glob/-/glob-3.2.11.tgz' },
+154 silly resolved     directories: {},
+154 silly resolved     _resolved: 'https://registry.npmjs.org/glob/-/glob-3.2.11.tgz',
+154 silly resolved     readme: 'ERROR: No README data found!' } ]
+155 info install glob@3.2.11 into /usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync
+156 info installOne glob@3.2.11
+157 verbose lib/node_modules/npm unbuild
+158 info preuninstall npm@1.4.28
+159 verbose lib/node_modules/grunt-cli/node_modules/nopt unbuild
+160 info preuninstall nopt@1.0.10
+161 verbose lib/node_modules/grunt-cli/node_modules/resolve unbuild
+162 info preuninstall resolve@0.3.1
+163 verbose lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob unbuild
+164 info preuninstall glob@3.2.11
+165 info uninstall npm@1.4.28
+166 info uninstall nopt@1.0.10
+167 info uninstall resolve@0.3.1
+168 info uninstall glob@3.2.11
+169 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild npm@1.4.28
+170 verbose /usr/local/bin,[object Object] binRoot
+171 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/grunt-cli/node_modules unbuild nopt@1.0.10
+172 verbose /usr/local/lib/node_modules/grunt-cli/node_modules/.bin,[object Object] binRoot
+173 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/grunt-cli/node_modules unbuild resolve@0.3.1
+174 info postuninstall resolve@0.3.1
+175 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules unbuild glob@3.2.11
+176 info postuninstall glob@3.2.11
+177 info postuninstall npm@1.4.28
+178 info postuninstall nopt@1.0.10
+179 verbose tar unpack /Users/Guitar/.npm/nopt/1.0.10/package.tgz
+180 silly lockFile 36545abe-ules-grunt-cli-node-modules-nopt tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt
+181 verbose lock tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt /Users/Guitar/.npm/36545abe-ules-grunt-cli-node-modules-nopt.lock
+182 silly lockFile d3f0c59b-itar-npm-nopt-1-0-10-package-tgz tar:///Users/Guitar/.npm/nopt/1.0.10/package.tgz
+183 verbose lock tar:///Users/Guitar/.npm/nopt/1.0.10/package.tgz /Users/Guitar/.npm/d3f0c59b-itar-npm-nopt-1-0-10-package-tgz.lock
+184 silly gunzTarPerm modes [ '755', '644' ]
+185 verbose tar unpack /Users/Guitar/.npm/glob/3.2.11/package.tgz
+186 silly lockFile f23e7931-es-findup-sync-node-modules-glob tar:///usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob
+187 verbose lock tar:///usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob /Users/Guitar/.npm/f23e7931-es-findup-sync-node-modules-glob.lock
+188 silly lockFile 8f40ad72-itar-npm-glob-3-2-11-package-tgz tar:///Users/Guitar/.npm/glob/3.2.11/package.tgz
+189 verbose lock tar:///Users/Guitar/.npm/glob/3.2.11/package.tgz /Users/Guitar/.npm/8f40ad72-itar-npm-glob-3-2-11-package-tgz.lock
+190 verbose tar unpack /Users/Guitar/.npm/resolve/0.3.1/package.tgz
+191 silly lockFile 0ffe0288-s-grunt-cli-node-modules-resolve tar:///usr/local/lib/node_modules/grunt-cli/node_modules/resolve
+192 verbose lock tar:///usr/local/lib/node_modules/grunt-cli/node_modules/resolve /Users/Guitar/.npm/0ffe0288-s-grunt-cli-node-modules-resolve.lock
+193 silly lockFile 19caf156-ar-npm-resolve-0-3-1-package-tgz tar:///Users/Guitar/.npm/resolve/0.3.1/package.tgz
+194 verbose lock tar:///Users/Guitar/.npm/resolve/0.3.1/package.tgz /Users/Guitar/.npm/19caf156-ar-npm-resolve-0-3-1-package-tgz.lock
+195 silly gunzTarPerm extractEntry .gitignore
+196 silly gunzTarPerm modes [ '755', '644' ]
+197 silly gunzTarPerm modes [ '755', '644' ]
+198 silly gunzTarPerm extractEntry LICENSE
+199 silly gunzTarPerm extractEntry package.json
+200 silly gunzTarPerm extractEntry package.json
+201 silly gunzTarPerm extractEntry package.json
+202 silly gunzTarPerm extractEntry README.md
+203 silly gunzTarPerm extractEntry bin/nopt.js
+204 silly gunzTarPerm extractEntry .npmignore
+205 silly gunzTarPerm extractEntry README.md
+206 silly gunzTarPerm extractEntry LICENSE
+207 silly gunzTarPerm extractEntry index.js
+208 silly gunzTarPerm extractEntry LICENSE
+209 silly gunzTarPerm extractEntry glob.js
+210 silly gunzTarPerm extractEntry examples/my-program.js
+211 silly gunzTarPerm extractEntry lib/nopt.js
+212 silly gunzTarPerm extractEntry example/async.js
+213 silly gunzTarPerm extractEntry example/sync.js
+214 silly gunzTarPerm extractEntry .travis.yml
+215 silly gunzTarPerm extractEntry readme.markdown
+216 silly gunzTarPerm extractEntry test/resolver.js
+217 verbose tar unpack /Users/Guitar/.npm/npm/2.1.6/package.tgz
+218 silly lockFile 3dfa8f63-r-usr-local-lib-node-modules-npm tar:///usr/local/lib/node_modules/npm
+219 verbose lock tar:///usr/local/lib/node_modules/npm /Users/Guitar/.npm/3dfa8f63-r-usr-local-lib-node-modules-npm.lock
+220 silly lockFile b8d48b8e-Guitar-npm-npm-2-1-6-package-tgz tar:///Users/Guitar/.npm/npm/2.1.6/package.tgz
+221 verbose lock tar:///Users/Guitar/.npm/npm/2.1.6/package.tgz /Users/Guitar/.npm/b8d48b8e-Guitar-npm-npm-2-1-6-package-tgz.lock
+222 silly gunzTarPerm modes [ '755', '644' ]
+223 silly gunzTarPerm extractEntry test/core.js
+224 silly gunzTarPerm extractEntry test/filter_sync.js
+225 silly gunzTarPerm extractEntry package.json
+226 silly gunzTarPerm extractEntry .npmignore
+227 silly gunzTarPerm extractEntry README.md
+228 silly gunzTarPerm extractEntry examples/g.js
+229 silly gunzTarPerm extractEntry examples/usr-local.js
+230 silly gunzTarPerm extractEntry test/resolver_sync.js
+231 silly gunzTarPerm extractEntry test/filter.js
+232 silly gunzTarPerm extractEntry test/mock.js
+233 silly gunzTarPerm extractEntry test/00-setup.js
+234 silly gunzTarPerm extractEntry test/cwd-test.js
+235 silly gunzTarPerm extractEntry test/globstar-match.js
+236 silly gunzTarPerm extractEntry LICENSE
+237 silly gunzTarPerm extractEntry cli.js
+238 silly gunzTarPerm extractEntry test/mock_sync.js
+239 silly gunzTarPerm extractEntry test/resolver/mug.js
+240 silly gunzTarPerm extractEntry AUTHORS
+241 silly gunzTarPerm extractEntry CHANGELOG.md
+242 silly gunzTarPerm extractEntry test/resolver/foo.js
+243 silly gunzTarPerm extractEntry test/resolver/mug.coffee
+244 silly gunzTarPerm extractEntry test/mark.js
+245 silly gunzTarPerm extractEntry CONTRIBUTING.md
+246 silly gunzTarPerm extractEntry .eslintrc
+247 silly gunzTarPerm extractEntry test/resolver/cup.coffee
+248 silly gunzTarPerm extractEntry test/resolver/other_path/root.js
+249 silly gunzTarPerm extractEntry test/stat.js
+250 silly gunzTarPerm extractEntry test/bash-comparison.js
+251 silly gunzTarPerm extractEntry test/resolver/other_path/lib/other-lib.js
+252 silly gunzTarPerm extractEntry test/resolver/bar/node_modules/foo/index.js
+253 silly gunzTarPerm extractEntry test/pause-resume.js
+254 silly gunzTarPerm extractEntry test/readme-issue.js
+255 silly lockFile 36545abe-ules-grunt-cli-node-modules-nopt tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt
+256 silly lockFile 36545abe-ules-grunt-cli-node-modules-nopt tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt
+257 silly lockFile d3f0c59b-itar-npm-nopt-1-0-10-package-tgz tar:///Users/Guitar/.npm/nopt/1.0.10/package.tgz
+258 silly lockFile d3f0c59b-itar-npm-nopt-1-0-10-package-tgz tar:///Users/Guitar/.npm/nopt/1.0.10/package.tgz
+259 info preinstall nopt@1.0.10
+260 silly gunzTarPerm extractEntry test/resolver/baz/package.json
+261 silly gunzTarPerm extractEntry test/resolver/baz/quux.js
+262 verbose readDependencies using package.json deps
+263 silly gunzTarPerm extractEntry test/root-nomount.js
+264 silly gunzTarPerm extractEntry test/root.js
+265 verbose readDependencies using package.json deps
+266 silly gunzTarPerm extractEntry Makefile
+267 silly gunzTarPerm extractEntry .npmrc
+268 verbose cache add [ 'abbrev@1', null ]
+269 verbose cache add name=undefined spec="abbrev@1" args=["abbrev@1",null]
+270 verbose parsed url { protocol: null,
+270 verbose parsed url   slashes: null,
+270 verbose parsed url   auth: null,
+270 verbose parsed url   host: null,
+270 verbose parsed url   port: null,
+270 verbose parsed url   hostname: null,
+270 verbose parsed url   hash: null,
+270 verbose parsed url   search: null,
+270 verbose parsed url   query: null,
+270 verbose parsed url   pathname: 'abbrev@1',
+270 verbose parsed url   path: 'abbrev@1',
+270 verbose parsed url   href: 'abbrev@1' }
+271 verbose cache add name="abbrev" spec="1" args=["abbrev","1"]
+272 verbose parsed url { protocol: null,
+272 verbose parsed url   slashes: null,
+272 verbose parsed url   auth: null,
+272 verbose parsed url   host: null,
+272 verbose parsed url   port: null,
+272 verbose parsed url   hostname: null,
+272 verbose parsed url   hash: null,
+272 verbose parsed url   search: null,
+272 verbose parsed url   query: null,
+272 verbose parsed url   pathname: '1',
+272 verbose parsed url   path: '1',
+272 verbose parsed url   href: '1' }
+273 verbose addNamed [ 'abbrev', '1' ]
+274 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+275 silly lockFile 6830b531-abbrev-1 abbrev@1
+276 verbose lock abbrev@1 /Users/Guitar/.npm/6830b531-abbrev-1.lock
+277 silly gunzTarPerm extractEntry test/resolver/baz/doom.js
+278 silly gunzTarPerm extractEntry test/resolver/biz/node_modules/tiv/index.js
+279 silly addNameRange { name: 'abbrev', range: '>=1.0.0-0 <2.0.0-0', hasData: false }
+280 silly gunzTarPerm extractEntry test/new-glob-optional-options.js
+281 silly gunzTarPerm extractEntry test/zz-cleanup.js
+282 silly gunzTarPerm extractEntry bin/npm-cli.js
+283 silly gunzTarPerm extractEntry bin/read-package-json.js
+284 verbose request where is /abbrev
+285 verbose request registry https://registry.npmjs.org/
+286 verbose url raw /abbrev
+287 verbose url resolving [ 'https://registry.npmjs.org/', './abbrev' ]
+288 verbose url resolved https://registry.npmjs.org/abbrev
+289 verbose request where is https://registry.npmjs.org/abbrev
+290 info trying registry request attempt 1 at 17:03:39
+291 verbose etag "4QNDPDFWVPQ9QQL4E8ZPN4JMY"
+292 http GET https://registry.npmjs.org/abbrev
+293 silly gunzTarPerm extractEntry test/resolver/biz/node_modules/grux/index.js
+294 silly gunzTarPerm extractEntry .travis.yml
+295 silly gunzTarPerm extractEntry lib/core.js
+296 silly gunzTarPerm extractEntry lib/async.js
+297 silly gunzTarPerm extractEntry test/nocase-nomagic.js
+298 silly gunzTarPerm extractEntry test/bash-results.json
+299 silly gunzTarPerm extractEntry bin/node-gyp-bin/node-gyp
+300 silly gunzTarPerm extractEntry bin/node-gyp-bin/node-gyp.cmd
+301 silly gunzTarPerm extractEntry bin/npm
+302 silly gunzTarPerm extractEntry lib/sync.js
+303 silly gunzTarPerm extractEntry lib/core.json
+304 silly gunzTarPerm extractEntry bin/npm.cmd
+305 silly gunzTarPerm extractEntry configure
+306 silly gunzTarPerm extractEntry doc/api/npm-prune.md
+307 silly gunzTarPerm extractEntry doc/api/npm-bin.md
+308 silly gunzTarPerm extractEntry doc/api/npm-cache.md
+309 silly gunzTarPerm extractEntry doc/api/npm-commands.md
+310 silly gunzTarPerm extractEntry doc/api/npm-config.md
+311 silly gunzTarPerm extractEntry doc/api/npm-deprecate.md
+312 silly gunzTarPerm extractEntry doc/api/npm-docs.md
+313 silly gunzTarPerm extractEntry doc/api/npm-edit.md
+314 http 304 https://registry.npmjs.org/abbrev
+315 silly registry.get cb [ 304,
+315 silly registry.get   { date: 'Mon, 03 Nov 2014 16:03:39 GMT',
+315 silly registry.get     server: 'Apache',
+315 silly registry.get     via: '1.1 varnish',
+315 silly registry.get     'last-modified': 'Mon, 03 Nov 2014 16:03:21 GMT',
+315 silly registry.get     'cache-control': 'max-age=60',
+315 silly registry.get     etag: '"4QNDPDFWVPQ9QQL4E8ZPN4JMY"',
+315 silly registry.get     age: '39',
+315 silly registry.get     'x-served-by': 'cache-ams4141-AMS',
+315 silly registry.get     'x-cache': 'HIT',
+315 silly registry.get     'x-cache-hits': '2',
+315 silly registry.get     'x-timer': 'S1415030619.222512,VS0,VE0',
+315 silly registry.get     vary: 'Accept',
+315 silly registry.get     'content-length': '0',
+315 silly registry.get     'keep-alive': 'timeout=10, max=50',
+315 silly registry.get     connection: 'Keep-Alive' } ]
+316 verbose etag https://registry.npmjs.org/abbrev from cache
+317 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0-0 <2.0.0-0', hasData: true }
+318 silly addNameRange versions [ 'abbrev', [ '1.0.3', '1.0.4', '1.0.5' ] ]
+319 verbose addNamed [ 'abbrev', '1.0.5' ]
+320 verbose addNamed [ '1.0.5', '1.0.5' ]
+321 silly lockFile 55d90b2f-abbrev-1-0-5 abbrev@1.0.5
+322 verbose lock abbrev@1.0.5 /Users/Guitar/.npm/55d90b2f-abbrev-1-0-5.lock
+323 silly lockFile 55d90b2f-abbrev-1-0-5 abbrev@1.0.5
+324 silly lockFile 55d90b2f-abbrev-1-0-5 abbrev@1.0.5
+325 silly lockFile 6830b531-abbrev-1 abbrev@1
+326 silly lockFile 6830b531-abbrev-1 abbrev@1
+327 silly gunzTarPerm extractEntry doc/api/npm-explore.md
+328 silly gunzTarPerm extractEntry doc/api/npm-help-search.md
+329 silly gunzTarPerm extractEntry doc/api/npm-init.md
+330 silly gunzTarPerm extractEntry doc/api/npm-install.md
+331 silly resolved [ { name: 'abbrev',
+331 silly resolved     version: '1.0.5',
+331 silly resolved     description: 'Like ruby\'s abbrev module, but in js',
+331 silly resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+331 silly resolved     main: 'abbrev.js',
+331 silly resolved     scripts: { test: 'node test.js' },
+331 silly resolved     repository: { type: 'git', url: 'http://github.com/isaacs/abbrev-js' },
+331 silly resolved     license:
+331 silly resolved      { type: 'MIT',
+331 silly resolved        url: 'https://github.com/isaacs/abbrev-js/raw/master/LICENSE' },
+331 silly resolved     bugs: { url: 'https://github.com/isaacs/abbrev-js/issues' },
+331 silly resolved     homepage: 'https://github.com/isaacs/abbrev-js',
+331 silly resolved     _id: 'abbrev@1.0.5',
+331 silly resolved     _shasum: '5d8257bd9ebe435e698b2fa431afde4fe7b10b03',
+331 silly resolved     _from: 'abbrev@1',
+331 silly resolved     _npmVersion: '1.4.7',
+331 silly resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+331 silly resolved     maintainers: [ [Object] ],
+331 silly resolved     dist:
+331 silly resolved      { shasum: '5d8257bd9ebe435e698b2fa431afde4fe7b10b03',
+331 silly resolved        tarball: 'http://registry.npmjs.org/abbrev/-/abbrev-1.0.5.tgz' },
+331 silly resolved     directories: {},
+331 silly resolved     _resolved: 'https://registry.npmjs.org/abbrev/-/abbrev-1.0.5.tgz',
+331 silly resolved     readme: 'ERROR: No README data found!' } ]
+332 info install abbrev@1.0.5 into /usr/local/lib/node_modules/grunt-cli/node_modules/nopt
+333 info installOne abbrev@1.0.5
+334 verbose lib/node_modules/grunt-cli/node_modules/nopt/node_modules/abbrev unbuild
+335 verbose tar unpack /Users/Guitar/.npm/abbrev/1.0.5/package.tgz
+336 silly lockFile 29339c90-modules-nopt-node-modules-abbrev tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt/node_modules/abbrev
+337 verbose lock tar:///usr/local/lib/node_modules/grunt-cli/node_modules/nopt/node_modules/abbrev /Users/Guitar/.npm/29339c90-modules-nopt-node-modules-abbrev.lock
+338 silly lockFile dd4231d0-tar-npm-abbrev-1-0-5-package-tgz tar:///Users/Guitar/.npm/abbrev/1.0.5/package.tgz
+339 verbose lock tar:///Users/Guitar/.npm/abbrev/1.0.5/package.tgz /Users/Guitar/.npm/dd4231d0-tar-npm-abbrev-1-0-5-package-tgz.lock
+340 silly gunzTarPerm modes [ '755', '644' ]
+341 silly lockFile 0ffe0288-s-grunt-cli-node-modules-resolve tar:///usr/local/lib/node_modules/grunt-cli/node_modules/resolve
+342 silly lockFile 0ffe0288-s-grunt-cli-node-modules-resolve tar:///usr/local/lib/node_modules/grunt-cli/node_modules/resolve
+343 silly lockFile f23e7931-es-findup-sync-node-modules-glob tar:///usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob
+344 silly lockFile f23e7931-es-findup-sync-node-modules-glob tar:///usr/local/lib/node_modules/grunt-cli/node_modules/findup-sync/node_modules/glob
+345 silly lockFile 19caf156-ar-npm-resolve-0-3-1-package-tgz tar:///Users/Guitar/.npm/resolve/0.3.1/package.tgz
+346 silly lockFile 19caf156-ar-npm-resolve-0-3-1-package-tgz tar:///Users/Guitar/.npm/resolve/0.3.1/package.tgz
+347 silly lockFile 8f40ad72-itar-npm-glob-3-2-11-package-tgz tar:///Users/Guitar/.npm/glob/3.2.11/package.tgz
+348 silly lockFile 8f40ad72-itar-npm-glob-3-2-11-package-tgz tar:///Users/Guitar/.npm/glob/3.2.11/package.tgz
+349 silly gunzTarPerm extractEntry doc/api/npm-link.md
+350 silly gunzTarPerm extractEntry doc/api/npm-load.md
+351 silly gunzTarPerm extractEntry package.json
+352 info preinstall resolve@0.3.1
+353 info preinstall glob@3.2.11
+354 silly gunzTarPerm extractEntry README.md
+355 silly gunzTarPerm extractEntry LICENSE
+356 verbose readDependencies using package.json deps
+357 verbose readDependencies using package.json deps
+358 verbose readDependencies using package.json deps
+359 silly resolved []
+360 verbose about to build /usr/local/lib/node_modules/grunt-cli/node_modules/resolve
+361 error Error: Cannot find module '/usr/local/lib/node_modules/npm/lib/build.js'
+361 error     at Function.Module._resolveFilename (module.js:338:15)
+361 error     at Function.Module._load (module.js:280:25)
+361 error     at Module.require (module.js:364:17)
+361 error     at require (module.js:380:17)
+361 error     at Object.defineProperty.get (/usr/local/lib/node_modules/npm/lib/npm.js:197:15)
+361 error     at /usr/local/lib/node_modules/npm/lib/install.js:948:18
+361 error     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:27:18)
+361 error     at /usr/local/lib/node_modules/npm/lib/install.js:600:7
+361 error     at asyncMap (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:27:18)
+361 error     at /usr/local/lib/node_modules/npm/lib/install.js:579:5
+362 error If you need help, you may report this *entire* log,
+362 error including the npm and node versions, at:
+362 error     <http://github.com/npm/npm/issues>
+363 error System Darwin 14.0.0
+364 error command "node" "/usr/local/bin/npm" "update" "-g"
+365 error cwd /Users/Guitar/FED2/WebApp
+366 error node -v v0.10.33
+367 error npm -v 1.4.28
+368 error code MODULE_NOT_FOUND
+369 verbose exit [ 1, true ]

@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Web App V1, basic JavaScript Skeleton">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Web App V1, basic JavaScript Skeleton" />
+        <meta name="viewport" content="width=device-width, initial-scale=1", user-scalable="no" />
         <title>My Favorite Movies</title>
-        <link rel="stylesheet" href="Includes/Styles/Default.css">
-        <link rel="stylesheet" href="Includes/Styles/Home.css">
-        <link rel="author" href="humans.txt">
+        <link rel="stylesheet" href="dist/css/Default.css" />
+        <link rel="stylesheet" href="dist/css/Home.css" />
+        <link rel="stylesheet" href="dist/css/Less.css" />
+        <link rel="author" href="humans.txt" />
     </head>
     <body>
 		<main id="content">
@@ -99,7 +100,7 @@
 							<img data-bind="cover" alt="">
 						</figure>
 
-						<p data-bind="plot"></p>
+						<p data-bind="simple_plot"></p>
 						<p class="Score">
 							Gemiddelde rating:
 							<span class="Score" data-bind="score"></span>
@@ -108,16 +109,30 @@
 				</div>
 			</section>
 
-				<section data-route="detail" id="detail">
-					<div class="Container">
-						<h1 data-bind="title"></h1>
-						<img data-bind="cover" alt="" />
-						<p data-bind="plot"></p>
+			<section data-route="detail" id="detail">
+				<div class="Container">
+					<h1 data-bind="title"></h1>
+					<p data-bind="directors"></p>
+					<img data-bind="cover" alt="" />
+					<p data-bind="plot"></p>
+					<div id="directors">
+						<div id="director">
+							<p>Directors:</p>
+							<span id="name"></span>
+						</div>
 					</div>
-				</section>
-			</div>
+					<p>Acteurs:</p>
+					<div id="actors">
+						<div id="actor">
+							<span id="actor_name"></span>
+							<span class="Italic">als</span>
+							<span id="character" class="Italic"></span>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
-        <script src="Includes/Javascript/Transparency/dist/transparency.min.js"></script>
+		<script src="Includes/Javascript/Transparency/dist/transparency.min.js"></script>
         <script src="Includes/Javascript/Routie.js"></script>
         <script src="Includes/Javascript/Underscore.js"></script>
         <script src="Includes/Javascript/app.js"></script>

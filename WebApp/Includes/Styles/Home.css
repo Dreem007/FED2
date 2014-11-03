@@ -1,11 +1,17 @@
 /* Extra CSS for "index.html" */
 
+body
+{
+	padding-top:69px;
+	padding-bottom:20px;
+}
+
 section, #GenreNavigation
 {
 	display:none;
 }
 
-section.Active, #GenreNavigation.Active, section#Loader
+section.Active, #GenreNavigation.Active, section#Loader, section#Forms
 {
 	display:block;
 }
@@ -50,48 +56,56 @@ section#Welcome
 
 /* START STYLING NAVIGATION */
 
-#MainNavigation ul li
+#MainNavigation
 {
-	float:left;
-	width:50%;
+	position:fixed;
+	top:0;
+	right:0;
+	left:0;
+	margin:auto;
 }
 
-	#MainNavigation ul li a
+	#MainNavigation ul li
 	{
-		display:block;
-		text-align:center;
-		font-size:46px;
-		color:#FFFFFF;
-		width:100%;
-		-webkit-box-shadow:inset 0 0 6px 0 #019fb3;
-		   -moz-box-shadow:inset 0 0 6px 0 #019fb3;
-				box-shadow:inset 0 0 6px 0 #019fb3; 
-		background-color:#00bcd4;
+		float:left;
+		width:50%;
 	}
 
-		#MainNavigation ul li a.Active
+		#MainNavigation ul li a
 		{
-			background-color:#028a9b !important;
+			display:block;
+			text-align:center;
+			font-size:46px;
+			color:#FFFFFF;
+			width:100%;
+			-webkit-box-shadow:inset 0 0 6px 0 #019fb3;
+			   -moz-box-shadow:inset 0 0 6px 0 #019fb3;
+					box-shadow:inset 0 0 6px 0 #019fb3; 
+			background-color:#028a9b;
 		}
 
-		#MainNavigation ul li a:hover
-		{
-			text-decoration:none;
-		}
+			#MainNavigation ul li a.Active
+			{
+				background-color:#00bcd4 !important;
+			}
+
+			#MainNavigation ul li a:hover
+			{
+				text-decoration:none;
+			}
 
 /* END STYLING NAVIGATION */
 
 /* START STYLING ABOUT */
 
-#about h1
+#about .Container:first-of-type h1
 {
 	line-height:45px;
 	text-align:center;
 	font-size:50px;
 	color:#4d4d4d;
 	margin:0;
-	margin-top:10px;
-	margin-bottom:10px;
+	margin-top:35px;
 }
 
 #about p
@@ -251,6 +265,19 @@ section#Welcome
 	       	 -o-transform:scale(1.1);
 	          	transform:scale(1.1);
 	}
+
+#detail #director #name, #detail #actor, #actor_name
+{
+	font-size:18px;
+	color:#4d4d4d;
+}
+
+.Italic
+{
+	font-size:16px;
+	font-style:italic;
+	color:#019fb3;
+}
 
 #detail p
 {

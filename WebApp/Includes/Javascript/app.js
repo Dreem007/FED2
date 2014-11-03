@@ -1,4 +1,4 @@
-// AVV 1, FRONT-END DEVELOPMENT 2 - WOENSDAG, 22 OKTOBER 2014
+// HERKANSING EINDOPDRACHT, FRONT-END DEVELOPMENT 2 - DINSDAG, 04 NOVEMBER 2014
 
 // Creeër namespace
 var movieApp = movieApp || {};
@@ -12,11 +12,9 @@ var movieApp = movieApp || {};
 		{
 			movieApp.router.init();
 			movieApp.sections.init();
-			movieApp.navSelector.init();
-			movieApp.mobileGestures.init();
 		}
 
-	};
+	},
 
 	// Zorgt voor het schakelen tussen de navigatie elementen
 	// Zorgt voor het schakelen tussen genres en titels
@@ -27,30 +25,30 @@ var movieApp = movieApp || {};
 
 			routie({
 			    'about': function() {
-			    	movieApp.sections.toggle("about");
+			    	movieApp.toggle.init("about");
 			    },
 
 			    'movies': function() {
-			    	movieApp.sections.toggle("movies");
+			    	movieApp.toggle.init("movies");
 			    },
 
 			    'movies/genre/:genre': function(genre){
-                    movieApp.content.genre(genre);
+                    movieApp.underscore.genre(genre);
                     Transparency.render(document.getElementById('filter'), movieApp.content.filteredData, movieApp.content.directives);
-                    movieApp.sections.toggle("filter");
+                    movieApp.toggle.init("filter");
                 },
 
                 'movies/:title': function(title) {
-                    movieApp.content.title(title);
+                    movieApp.underscore.title(title);
                     Transparency.render(document.getElementById('detail'), movieApp.content.filteredData, movieApp.content.directives);
-                    movieApp.sections.toggle("detail");
+                    movieApp.toggle.init("detail");
                 },
 
 			});
 
 		}
 
-	};
+	},
 
 	movieApp.content = {
 
@@ -85,24 +83,49 @@ var movieApp = movieApp || {};
 			{
 				// Werkt op principe van "name/value".
 				// JSON.stringify zet de methode movieApp.content.movies om naar een string, omdat alleen strings opgeslagen kunnen worden.
+				// Stel de variabele "getStorage" gelijk aan het ophalen van "movieData" en zet deze weer om in een Javascript object.
 				localStorage.setItem("movieData", JSON.stringify(movieApp.content.movies));
-				localStorage.getItem("movieData");
 			} else {
 			    console.log("Damn! No Web Storage support.. Better get that browser update :D");
-			};
+			}
 			// Roep de methode movieApp.content.underscoreProps aan
-			movieApp.content.underscoreProps();
+			movieApp.underscore.underscoreProps();
 			Transparency.render(document.getElementById("movies"), this.movies, this.directives);
+			console.log(movieApp.content.movies);
 		},
+
+       	// Variabele van Transparecy
+       	// cover= hangt "cover" afkomstig uit de API aan de src (van een img)
+       	// title= hangt "title" afkomstig uit de API aan de href (van een link)
+		directives: {
+			cover: {
+			    src: function(params) 
+			    {
+			    	return this.cover;
+			    }
+		  	},
+
+		  	title: {
+                href: function(params){
+                    return "#movies/" + this.url;
+                }
+            }
+		}
+
+	},
+
+	movieApp.underscore = {
 
 		// Methode met undescore; zorgt voor het ophalen van de scores, waarna het gemiddelde daarvan berekend en getoond wordt
 		underscoreProps: function() {
 			// _.map= creeër een array met alle waarden
 			// _.reduce= reduceert alle waarden binnen een array tot een enkele waarde
 			_.map(movieApp.content.movies, function (movie){
-				var movie
+				var movie;
                 movie.score = _.reduce(movie.reviews, function(memo, review){ return memo + review.score; }, 0) / movie.reviews.length;
-
+                if (movie.score = "NaN") {
+                	movie.score = "niet beschikbaar"
+                }
                 // Zet alle hoofdletters binnen een titel om naar kleine letters
                 // Vervang de aangegeven tekens met een "-"
 	            movie.url = movie.title.replace(/\s+/g, '-').toLowerCase();
@@ -120,7 +143,6 @@ var movieApp = movieApp || {};
             // Stelt movieApp.content.filteredData gelijk aan -
             // _.where= kijkt naar alle waarden binnen een array, en geeft alleen de waarden terug met het juiste sleutelwoord. 
             movieApp.content.filteredData = _.where(movieApp.content.movies, {genre:true});
-            console.log(movieApp.content.filteredData);
         },
 
         // Methode met underscore; zorgt voor het filteren op de juiste titel
@@ -128,74 +150,64 @@ var movieApp = movieApp || {};
             movieApp.content.filteredData = _.where(movieApp.content.movies, {url: filter});
         },
 
-       	// Variabele van Transparecy
-       	// cover= hangt "cover" afkomstig uit de API aan de src (van een img)
-       	// title= hang "title" afkomstig uit de API aan de href (van een link)
-		directives: {
-			cover: {
-			    src: function(params) 
-			    {
-			    	return this.cover;
-			    }
-		  	},
+	},
 
-		  	title: {
-                href: function(params){
-                    return "#movies/" + this.url;
-                }
-            }
-		}
-
-	};
-
-	movieApp.sections = {
-
-		// Start de functies binnen de methode "init"
-		init: function() {
-			movieApp.content.about();
-			movieApp.content.movies();
-		},
-
+	movieApp.toggle = {
 		// Methode waarmee geschakeld wordt tussen display:block en display:none
 		// Als "section" gelijk wordt gesteld aan waarde x, zet dan deze if statement in.
 		// Via routie wordt er een waarde aan "section" gehangen
-		toggle: function(section) {
+		toggleAbout: function() {
+			document.getElementById("about").classList.add("Active");
+			document.getElementById("NavAbout").classList.add("Active");
+			document.getElementById("Welcome").classList.remove("Active");
+			document.getElementById("NavMovies").classList.remove("Active");
+			document.getElementById("ShowMovies").classList.remove("Active");
+			document.getElementById("detail").classList.remove("Active");
+			document.getElementById("ShowFilter").classList.remove("Active");
+			document.getElementById("GenreNavigation").classList.remove("Active");
+		},
+
+		toggleMovies: function() {
+			document.getElementById("ShowMovies").classList.add("Active");
+			document.getElementById("NavMovies").classList.add("Active");
+			document.getElementById("Welcome").classList.remove("Active");
+			document.getElementById("NavAbout").classList.remove("Active");
+			document.getElementById("GenreNavigation").classList.add("Active");
+			document.getElementById("about").classList.remove("Active");
+			document.getElementById("detail").classList.remove("Active");
+			document.getElementById("ShowFilter").classList.remove("Active");
+		},
+
+		toggleDetail: function() {
+			document.getElementById("detail").classList.add("Active");
+			document.getElementById("GenreNavigation").classList.add("Active");
+			document.getElementById("Welcome").classList.remove("Active");
+			document.getElementById("ShowMovies").classList.remove("Active");
+			document.getElementById("about").classList.remove("Active");
+			document.getElementById("ShowFilter").classList.remove("Active");
+		},
+
+		toggleFilter: function() {
+			document.getElementById("ShowFilter").classList.add("Active");
+			document.getElementById("GenreNavigation").classList.add("Active");
+			document.getElementById("Welcome").classList.remove("Active");
+			document.getElementById("about").classList.remove("Active");
+			document.getElementById("ShowMovies").classList.remove("Active");
+			document.getElementById("detail").classList.remove("Active");
+		},
+
+		init: function(section) {
 			if (section === "about") {
-				document.getElementById("about").classList.add("Active");
-				document.getElementById("NavAbout").classList.add("Active");
-				document.getElementById("Welcome").classList.remove("Active");
-				document.getElementById("NavMovies").classList.remove("Active");
-				document.getElementById("ShowMovies").classList.remove("Active");
-				document.getElementById("detail").classList.remove("Active");
-				document.getElementById("ShowFilter").classList.remove("Active");
-				document.getElementById("GenreNavigation").classList.remove("Active");
+				movieApp.toggle.toggleAbout();
 			} else if(section === "movies") {
-				document.getElementById("ShowMovies").classList.add("Active");
-				document.getElementById("NavMovies").classList.add("Active");
-				document.getElementById("Welcome").classList.remove("Active");
-				document.getElementById("NavAbout").classList.remove("Active");
-				document.getElementById("GenreNavigation").classList.add("Active");
-				document.getElementById("about").classList.remove("Active");
-				document.getElementById("detail").classList.remove("Active");
-				document.getElementById("ShowFilter").classList.remove("Active");
+				movieApp.toggle.toggleMovies();
 			} else if(section === "detail") {
-				document.getElementById("detail").classList.add("Active");
-				document.getElementById("GenreNavigation").classList.add("Active");
-				document.getElementById("Welcome").classList.remove("Active");
-				document.getElementById("ShowMovies").classList.remove("Active");
-				document.getElementById("about").classList.remove("Active");
-				document.getElementById("ShowFilter").classList.remove("Active");
+				movieApp.toggle.toggleDetail();
 			} else if(section === "filter") {
-				document.getElementById("ShowFilter").classList.add("Active");
-				document.getElementById("GenreNavigation").classList.add("Active");
-				document.getElementById("Welcome").classList.remove("Active");
-				document.getElementById("about").classList.remove("Active");
-				document.getElementById("ShowMovies").classList.remove("Active");
-				document.getElementById("detail").classList.remove("Active");
+				movieApp.toggle.toggleFilter();
 			}
 		}
-
-	};
+	},
 
 	movieApp.navSelector = {
 
@@ -215,7 +227,7 @@ var movieApp = movieApp || {};
 			elems[i].addEventListener('mousedown', makeActive);
 		}
 
-	};
+	},
 
 	movieApp.mobileGestures = {
 
@@ -230,7 +242,7 @@ var movieApp = movieApp || {};
 			function handleTouchStart(evt) {                                         
 			    xDown = evt.touches[0].clientX;                                      
 			    yDown = evt.touches[0].clientY;                                      
-			};                                                
+			}                                       
 
 			function handleTouchMove(evt) {
 			    if ( ! xDown || ! yDown ) {
@@ -245,23 +257,9 @@ var movieApp = movieApp || {};
 
 			    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
 			        if ( xDiff > 0 ) {
-			            document.getElementById("about").classList.add("Active");
-						document.getElementById("NavAbout").classList.add("Active");
-						document.getElementById("Welcome").classList.remove("Active");
-						document.getElementById("NavMovies").classList.remove("Active");
-						document.getElementById("ShowMovies").classList.remove("Active");
-						document.getElementById("detail").classList.remove("Active");
-						document.getElementById("filter").classList.remove("Active");
-						document.getElementById("GenreNavigation").classList.remove("Active");
+			            movieApp.toggle.init("about");
 			        } else {
-			          	document.getElementById("ShowMovies").classList.add("Active");
-						document.getElementById("NavMovies").classList.add("Active");
-						document.getElementById("Welcome").classList.remove("Active");
-						document.getElementById("NavAbout").classList.remove("Active");
-						document.getElementById("GenreNavigation").classList.add("Active");
-						document.getElementById("about").classList.remove("Active");
-						document.getElementById("detail").classList.remove("Active");
-						document.getElementById("filter").classList.remove("Active");
+			          	movieApp.toggle.init("movies");
 				    }                       
 			    } else {
 			        if ( yDiff > 0 ) {
@@ -273,11 +271,24 @@ var movieApp = movieApp || {};
 			    /* reset values */
 			    xDown = null;
 			    yDown = null;                                             
-			};
+			}
 
 		}
 
-	}
+	},
+
+	movieApp.sections = {
+
+		// Start de functies binnen de methode "init"
+		init: function() {
+			movieApp.content.about();
+			movieApp.content.movies();
+			movieApp.toggle.init();
+			movieApp.navSelector.init();
+			movieApp.mobileGestures.init();
+		},
+
+	},
 
 	movieApp.xhr = {
 		trigger: function (type, url, success, data) 
@@ -289,15 +300,23 @@ var movieApp = movieApp || {};
 
 			type === 'POST' ? req.send(data) : req.send(null);
 
+			// Als XHR succesvol wordt uitgevoerd, begint de cycles bij movieApp.content.movies
+			// Als XHR niet succesvol wordt uitgevoerd (offline), dan begint de "else if" hieronder te lopen
 			req.onreadystatechange = function() {
 				if (req.readyState === 4) {
 					if (req.status === 200 || req.status === 201) 
 					{
 						success(req.responseText);
 						document.getElementById("Loader").style.display = 'none';
+					} else if (req.status === 0) {
+						document.getElementById("Loader").style.display = 'none';
+						alert("Deze webpagina heeft momenteel geen verbinding met de server. U kunt deels gebruik blijven maken van de webapp totdat deze weer is verbonden.");
+						// Zet localStoragedata weer terug om naar een Javascript object, en plaats deze in movieApp.content.movies
+						movieApp.content.movies = JSON.parse(localStorage.getItem("movieData"));
+						Transparency.render(document.getElementById("movies"), movieApp.content.movies, movieApp.content.directives);
 					}
 				}
-			}
+			};
 		}
 	};
 
